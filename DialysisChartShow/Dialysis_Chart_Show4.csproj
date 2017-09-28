@@ -1,0 +1,3116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8CC49D91-692E-41EC-AC47-AFC2F0BFBCD8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dialysis_Chart_Show</RootNamespace>
+    <AssemblyName>Dialysis_Chart_Show</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <PublishDatabases>false</PublishDatabases>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+    <DesktopBuildPackageLocation />
+    <DeployIisAppPath />
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabases>false</PublishDatabases>
+    <PublishDatabaseSettings>
+      <Objects>
+      </Objects>
+    </PublishDatabaseSettings>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoParameterizationWebConfigConnectionStrings>false</AutoParameterizationWebConfigConnectionStrings>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>dtc.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Dialysis2FHIR_v13, Version=0.13.6457.27541, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dialysis2FHIR_v13\Dialysis2FHIR_v13.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2e12ce3d0176cd87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ext.NET.WebForms.4.1.0\lib\net40\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities, Version=2.5.0.0, Culture=neutral, PublicKeyToken=2c34ac34702a3c23, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ext.NET.WebForms.4.1.0\lib\net40\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Hl7.Fhir.DSTU21.Core, Version=0.90.4.21547, Culture=neutral, PublicKeyToken=d706911480550fc3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Dialysis2FHIR_v13\Hl7.Fhir.DSTU21.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <!--Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+	  <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference-->
+    <Reference Include="MySql.Data, Version=6.2.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MySql.Data.6.8.3\lib\net40\MySql.Data.DLL</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ext.NET.WebForms.4.1.0\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.3.2.0.0\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Transformer.NET, Version=2.1.1.22883, Culture=neutral, PublicKeyToken=e274d618e7c603a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ext.NET.WebForms.4.1.0\lib\net40\Transformer.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appointment.aspx" />
+    <Content Include="BaseForm.aspx" />
+    <Content Include="checkin\Csv.xsl" />
+    <Content Include="checkin\DialysisTwoWeekList.aspx" />
+    <Content Include="checkin\Dialysis_Question4.aspx" />
+    <Content Include="checkin\Dialysis_PreSet.aspx" />
+    <Content Include="checkin\Excel.xsl" />
+    <Content Include="checkin\Get_Material.aspx" />
+    <Content Include="checkin\DrugMod_List.ascx" />
+    <Content Include="checkin\drug_trub.aspx" />
+    <Content Include="checkin\TempPatient.aspx" />
+    <Content Include="checkin\SchMenu.aspx" />
+    <Content Include="checkin\Dialysis_Info.aspx" />
+    <Content Include="checkin\Dialysis_PreSetBase.aspx" />
+    <Content Include="checkin\Dialysis_PreSetView.aspx" />
+    <Content Include="checkin\DrugMod_ListAll.ascx" />
+    <Content Include="checkin\Patient_detail.aspx" />
+    <Content Include="checkin\TempPatient_Tab.aspx" />
+    <Content Include="checkin\Dialysis_PreSetSch.aspx" />
+    <Content Include="checkin\Patient_Drug.aspx" />
+    <Content Include="checkin\Dialysis_ModPreSet.aspx" />
+    <Content Include="checkin\drug_trub_package.aspx" />
+    <Content Include="checkin\Patient_Info.aspx" />
+    <Content Include="checkin\Get_Drug.aspx" />
+    <Content Include="checkin\TempPatient_Sch.aspx" />
+    <Content Include="checkin\TempPatient_Sch1.aspx" />
+    <Content Include="checkin\SchTableEdit.aspx" />
+    <Content Include="checkin\Get_PatMList.aspx" />
+    <Content Include="checkin\SearchPSch.aspx" />
+    <Content Include="checkin\Dialysis_PreSetLong.aspx" />
+    <Content Include="checkin\Dialysis_PreSetShort.aspx" />
+    <Content Include="checkin\PSchInsert.aspx" />
+    <Content Include="css\btn.gif" />
+    <Content Include="css\dialysis.css" />
+    <Content Include="css\grid3-hd-btn.png" />
+    <Content Include="css\header_sprite.png" />
+    <Content Include="css\header_sprite_over.png" />
+    <Content Include="css\page-first.gif" />
+    <Content Include="css\page-last.gif" />
+    <Content Include="css\page-next.gif" />
+    <Content Include="css\page-prev.gif" />
+    <Content Include="css\refresh.gif" />
+    <Content Include="css\row-over.png" />
+    <Content Include="css\row-selected.png" />
+    <Content Include="css\stock.css" />
+    <Content Include="css\toolbar-bg.png" />
+    <Content Include="css\dialysis_01.css" />
+    <Content Include="css\grid.css" />
+    <Content Include="css\grid-r.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Device\Dialysis_Device.aspx" />
+    <Content Include="Device\Dialysis_Device_01.aspx" />
+    <Content Include="Device\Dialysis_Device_02.aspx" />
+    <Content Include="Device\Dialysis_Device_04.aspx" />
+    <Content Include="Device\Dialysis_Device_05.aspx" />
+    <Content Include="Device\Dialysis_Device_03.aspx" />
+    <Content Include="Device\Dialysis_Device_06.aspx" />
+    <Content Include="Dialysis_Schedul.aspx" />
+    <Content Include="checkin\Material_List.aspx" />
+    <Content Include="images\box_blue.png" />
+    <Content Include="images\box_blue128_setting.png" />
+    <Content Include="images\box_blue129_setting.png" />
+    <Content Include="images\box_blue222.png" />
+    <Content Include="images\box_blue296_appt.png" />
+    <Content Include="images\box_blue296_blood.png" />
+    <Content Include="images\box_blue296_doctor.png" />
+    <Content Include="images\box_blue296_drug.png" />
+    <Content Include="images\box_blue296_inv.png" />
+    <Content Include="images\box_blue296_inv2.png" />
+    <Content Include="images\box_blue296_reg.png" />
+    <Content Include="images\box_blue2_appt.png" />
+    <Content Include="images\box_blue96_setting.png" />
+    <Content Include="images\box_blue_128.png" />
+    <Content Include="images\box_blue_appt.png" />
+    <Content Include="images\box_blue_blood2.png" />
+    <Content Include="images\box_blue_doctor.png" />
+    <Content Include="images\box_blue_drug.png" />
+    <Content Include="images\box_blue_inv.png" />
+    <Content Include="images\box_blue_light2.png" />
+    <Content Include="images\box_blue_light3.png" />
+    <Content Include="images\box_blue_reg.png" />
+    <Content Include="images\box_yellow.png" />
+    <Content Include="images\box_yellow128_setting.png" />
+    <Content Include="images\box_yellow296_appt.png" />
+    <Content Include="images\box_yellow296_blood.png" />
+    <Content Include="images\box_yellow296_doctor.png" />
+    <Content Include="images\box_yellow296_drug.png" />
+    <Content Include="images\box_yellow296_inv.png" />
+    <Content Include="images\box_yellow296_inv2.png" />
+    <Content Include="images\box_yellow296_reg.png" />
+    <Content Include="images\box_yellow96_setting.png" />
+    <Content Include="images\box_yellow_300.png" />
+    <Content Include="images\box_yellow_appt.png" />
+    <Content Include="images\box_yellow_blood.png" />
+    <Content Include="images\box_yellow_blood128.png" />
+    <Content Include="images\box_yellow_doctor.png" />
+    <Content Include="images\box_yellow_doctor_300.png" />
+    <Content Include="images\box_yellow_drug.png" />
+    <Content Include="images\box_yellow_inv.png" />
+    <Content Include="images\box_yellow_reg.png" />
+    <Content Include="images\box_yellow_reg_300.png" />
+    <Content Include="images\btn_b16.png" />
+    <Content Include="images\btn_b96.png" />
+    <Content Include="images\btn_g16.png" />
+    <Content Include="images\btn_g96.png" />
+    <Content Include="images\btn_r16.png" />
+    <Content Include="images\btn_r96.png" />
+    <Content Include="images\business.jpg" />
+    <Content Include="images\button_blue.png" />
+    <Content Include="images\button_green.png" />
+    <Content Include="images\delete_16.png" />
+    <Content Include="images\delete_32.png" />
+    <Content Include="images\dtc.jpg" />
+    <Content Include="images\dtc1.jpg" />
+    <Content Include="images\error_48.png" />
+    <Content Include="images\exit_16.png" />
+    <Content Include="images\False.jpg" />
+    <Content Include="images\female.jpg" />
+    <Content Include="images\female.png" />
+    <Content Include="images\female_256.png" />
+    <Content Include="images\Healthcare-Facilities-Banner.jpg" />
+    <Content Include="images\Healthcare-Facilities-BannerT.jpg" />
+    <Content Include="images\key2.png" />
+    <Content Include="images\lock_delete16.png" />
+    <Content Include="images\lock_delete32.png" />
+    <Content Include="images\logo2.jpg" />
+    <Content Include="images\male.jpg" />
+    <Content Include="images\male.png" />
+    <Content Include="images\male_256.png" />
+    <Content Include="images\pic1_001NC.jpg" />
+    <Content Include="images\quest_64.png" />
+    <Content Include="images\refresh.png" />
+    <Content Include="images\seach_24.png" />
+    <Content Include="images\setting_64.png" />
+    <Content Include="images\start_16.png" />
+    <Content Include="images\stop_16.png" />
+    <Content Include="images\tick_16.png" />
+    <Content Include="images\tick_32.png" />
+    <Content Include="images\tick_48.png" />
+    <Content Include="images\tmpappt.png" />
+    <Content Include="images\tmpappt_16.png" />
+    <Content Include="images\tmpappt_32.png" />
+    <Content Include="images\True.jpg" />
+    <Content Include="images\warning_48.png" />
+    <Content Include="Information\Csv.xsl" />
+    <Content Include="Information\Dialysis_05_04_Add.aspx" />
+    <Content Include="Information\Dialysis_06_06_Alasamo.aspx" />
+    <Content Include="Information\Dialysis_06_06_Alasamo_List.aspx" />
+    <Content Include="Information\Dialysis_08.aspx" />
+    <Content Include="Information\Dialysis_09_03.aspx" />
+    <Content Include="Information\Dialysis_09_04_Xian.aspx" />
+    <Content Include="Information\Dialysis_0h_08.aspx" />
+    <Content Include="Information\Dialysis_09_01_117.aspx" />
+    <Content Include="Information\Dialysis_09_01_117S.aspx" />
+    <Content Include="Information\Dialysis_09_01_All.aspx" />
+    <Content Include="Information\Dialysis_09_01_Flex.aspx" />
+    <Content Include="Information\Dialysis_09_01_SuzhouS.aspx" />
+    <Content Include="Information\Dialysis_09_01_XianS.aspx" />
+    <Content Include="Information\Dialysis_10.aspx" />
+    <Content Include="Information\Dialysis_10_C01.aspx" />
+    <Content Include="Information\Dialysis_help.aspx" />
+    <Content Include="Information\Biochemical_Not_Checked_List.aspx" />
+    <Content Include="Information\Dialysis_09_02_detail.aspx" />
+    <Content Include="dtc.ico" />
+    <Content Include="Information\Dialysis_02_031.aspx" />
+    <Content Include="Information\Dialysis_02_041.aspx" />
+    <Content Include="Information\Dialysis_06_011.aspx" />
+    <Content Include="Information\Dialysis_06_012.aspx" />
+    <Content Include="Information\Dialysis_06_04.aspx" />
+    <Content Include="Information\Dialysis_06_05.aspx" />
+    <Content Include="Information\Dialysis_07_02.aspx" />
+    <Content Include="Information\Dialysis_01.aspx" />
+    <Content Include="Information\Dialysis_01_01.aspx" />
+    <Content Include="Information\Dialysis_01_02.aspx" />
+    <Content Include="Information\Dialysis_01_03.aspx" />
+    <Content Include="Information\Dialysis_01_04.aspx" />
+    <Content Include="Information\Dialysis_01_05.aspx" />
+    <Content Include="Information\Dialysis_01_06.aspx" />
+    <Content Include="Information\Dialysis_01_07.aspx" />
+    <Content Include="Information\Dialysis_02.aspx" />
+    <Content Include="Information\Dialysis_02_01.aspx" />
+    <Content Include="Information\Dialysis_02_02.aspx" />
+    <Content Include="Information\Dialysis_02_03.aspx" />
+    <Content Include="Information\Dialysis_02_04.aspx" />
+    <Content Include="Information\Dialysis_02_05.aspx" />
+    <Content Include="Information\Dialysis_02_06.aspx" />
+    <Content Include="Information\Dialysis_02_07.aspx" />
+    <Content Include="Information\Dialysis_03.aspx" />
+    <Content Include="Information\Dialysis_03_01.aspx" />
+    <Content Include="Information\Dialysis_03_02.aspx" />
+    <Content Include="Information\Dialysis_03_03.aspx" />
+    <Content Include="Information\Dialysis_03_04.aspx" />
+    <Content Include="Information\Dialysis_03_05.aspx" />
+    <Content Include="Information\Dialysis_03_06.aspx" />
+    <Content Include="Information\Dialysis_03_07.aspx" />
+    <Content Include="Information\Dialysis_04.aspx" />
+    <Content Include="Information\Dialysis_04_02.aspx" />
+    <Content Include="Information\Dialysis_05.aspx" />
+    <Content Include="Information\Dialysis_05_01.aspx" />
+    <Content Include="Information\Dialysis_05_02.aspx" />
+    <Content Include="Information\Dialysis_06.aspx" />
+    <Content Include="Information\Dialysis_06_01.aspx" />
+    <Content Include="Information\Dialysis_06_02.aspx" />
+    <Content Include="Information\Dialysis_07.aspx" />
+    <Content Include="Information\Dialysis_081.aspx" />
+    <Content Include="Information\Dialysis_09.aspx" />
+    <Content Include="Information\Dialysis_09_02.aspx" />
+    <Content Include="Information\Dialysis_09_02_detail_Editor.ascx" />
+    <Content Include="Information\Dialysis_09_03_New.aspx" />
+    <Content Include="Information\Dialysis_09_21.aspx" />
+    <Content Include="Information\Dialysis_09_22.aspx" />
+    <Content Include="Information\Dialysis_09_23.aspx" />
+    <Content Include="Information\Dialysis_09_24.aspx" />
+    <Content Include="Information\Dialysis_09_25.aspx" />
+    <Content Include="Information\Dialysis_09_26.aspx" />
+    <Content Include="Information\Dialysis_0h.aspx" />
+    <Content Include="Information\Dialysis_0h_01.aspx" />
+    <Content Include="Information\Dialysis_0h_02.aspx" />
+    <Content Include="Information\Dialysis_0h_03.aspx" />
+    <Content Include="Information\Dialysis_0h_04.aspx" />
+    <Content Include="Information\Dialysis_0h_05.aspx" />
+    <Content Include="Information\Dialysis_0h_06.aspx" />
+    <Content Include="Information\Dialysis_0h_07.aspx" />
+    <Content Include="Information\Dialysis_12.aspx" />
+    <Content Include="Information\Dialysis_12_01.aspx" />
+    <Content Include="Information\Dialysis_12_02.aspx" />
+    <Content Include="Information\Dialysis_13_new.aspx" />
+    <Content Include="Information\Dialysis_Info.aspx" />
+    <Content Include="Information\dry_weight_Chart.aspx" />
+    <Content Include="Information\dry_weight.aspx" />
+    <Content Include="Information\dry_weightlist.aspx" />
+    <Content Include="Information\Dialysis_09_01_Suzhou.aspx" />
+    <Content Include="Information\Dialysis_09_01_Xian.aspx" />
+    <Content Include="Information\Dialysis_09_01_StandardS.aspx" />
+    <Content Include="Information\Dialysis_09_01_Standard.aspx" />
+    <Content Include="Information\Excel.xsl" />
+    <Content Include="Information\PatEdit.aspx" />
+    <Content Include="Information\Pat_info_list.aspx" />
+    <Content Include="Information\pat_stats.aspx" />
+    <Content Include="Information\Biochemical_Indicators_list.aspx" />
+    <Content Include="Information\vcard_edit.png" />
+    <Content Include="Information\Dialysis_04_00.aspx" />
+    <Content Include="Information\Dialysis_04_01.aspx" />
+    <Content Include="Information\Biochemical_Not_Checked_List_V2.aspx" />
+    <Content Include="Information\DialysisTwoWeekList.aspx" />
+    <Content Include="Information\DialysisFhirClient.aspx" />
+    <Content Include="Information\Dialysis_09_01_Henan.aspx" />
+    <Content Include="Information\Dialysis_09_01_HenanS.aspx" />
+    <Content Include="Information\Dialysis_09_04.aspx" />
+    <Content Include="Information\Dialysis_05_03.aspx" />
+    <Content Include="Information\Dialysis_05_04.aspx" />
+    <Content Include="Information\Dialysis_05_041.aspx" />
+    <Content Include="Information\Dialysis_0h_08_List.aspx" />
+    <Content Include="Information\Dialysis_0h_08_Edit.aspx" />
+    <Content Include="Information\Dialysis_06_012_Alasamo.aspx" />
+    <Content Include="Information\Dialysis_06_02_Alasamo.aspx" />
+    <Content Include="Information\Dialysis_06_04_Alasamo.aspx" />
+    <Content Include="Information\Lab_Abnormal_Chart.aspx" />
+    <Content Include="Information\Dialysis_06_05_Alasamo.aspx" />
+    <Content Include="Information\Dialysis_10_I_Alasamo_List.aspx" />
+    <Content Include="Information\Dialysis_09_00_List.aspx" />
+    <Content Include="Information\Dialysis_09_00_Add.aspx" />
+    <Content Include="Information\Dialysis_09_00_Edit.aspx" />
+    <Content Include="Information\Dialysis_10_B01.aspx" />
+    <Content Include="Information\Dialysis_10_B10.aspx" />
+    <Content Include="Information\Dialysis_10_B11.aspx" />
+    <Content Include="Information\Dialysis_10_B13.aspx" />
+    <Content Include="Information\Dialysis_10_D01.aspx" />
+    <Content Include="Information\Dialysis_10_G01.aspx" />
+    <Content Include="Information\Dialysis_10_K01.aspx" />
+    <Content Include="Ipad\Dialysis_0h_01.aspx" />
+    <Content Include="Ipad\Dialysis_0h_02.aspx" />
+    <Content Include="Ipad\Dialysis_0h_03.aspx" />
+    <Content Include="Ipad\Dialysis_0h_04.aspx" />
+    <Content Include="Ipad\Dialysis_0h_05.aspx" />
+    <Content Include="Ipad\Dialysis_0h_06.aspx" />
+    <Content Include="Ipad\Dialysis_0h_07.aspx" />
+    <Content Include="Ipad\ipad_PreSetShort.aspx" />
+    <Content Include="Ipad\ipad_PreSetLong.aspx" />
+    <Content Include="ipad_Default.aspx" />
+    <Content Include="ipad_detaillist02_117.aspx" />
+    <Content Include="ipad_detaillist02_Standard.aspx" />
+    <Content Include="ipad_detaillist02_Suzhou.aspx" />
+    <Content Include="ipad_detaillist_117.aspx" />
+    <Content Include="ipad_detaillist_Standard.aspx" />
+    <Content Include="ipad_detaillist_Suzhou.aspx" />
+    <Content Include="ipad_EvaForm_Suzhou.aspx" />
+    <Content Include="ipad_PatientList.aspx" />
+    <Content Include="i_pad_ordershortdrug.aspx" />
+    <Content Include="login117.aspx" />
+    <Content Include="loginXian.aspx" />
+    <Content Include="patimages\20160510b121b0b4a1.jpg" />
+    <Content Include="report\Report_Dialysis_h.aspx" />
+    <Content Include="report\Rpt_View_Dialysis.aspx" />
+    <Content Include="report\All report.rpt" />
+    <Content Include="report\Ap report.rpt" />
+    <Content Include="report\data1.rpt" />
+    <Content Include="report\data2.rpt" />
+    <Content Include="report\data22.rpt" />
+    <Content Include="report\data22HDF.rpt" />
+    <Content Include="report\data23.rpt" />
+    <Content Include="report\Dc report.rpt" />
+    <Content Include="report\dialysis.rpt" />
+    <Content Include="report\dialysis_report.rpt" />
+    <Content Include="report\dialysis_report2.rpt" />
+    <Content Include="report\dialysis_report4.rpt" />
+    <Content Include="report\dialysis_report4B.rpt" />
+    <Content Include="report\dialysis_report_age.rpt" />
+    <Content Include="report\dialysis_report_age2.rpt" />
+    <Content Include="report\dialysis_report_cnt.rpt" />
+    <Content Include="report\dialysis_report_cnt2.rpt" />
+    <Content Include="report\dialysis_report_cntA.rpt" />
+    <Content Include="report\dialysis_report_dry.rpt" />
+    <Content Include="report\dialysis_report_e01.rpt" />
+    <Content Include="report\dialysis_report_e011.rpt" />
+    <Content Include="report\dialysis_report_err.rpt" />
+    <Content Include="report\dialysis_report_err2.rpt" />
+    <Content Include="report\dialysis_report_err2A.rpt" />
+    <Content Include="report\dialysis_report_h01.rpt" />
+    <Content Include="report\dialysis_report_h02.rpt" />
+    <Content Include="report\dialysis_report_h03.rpt" />
+    <Content Include="report\dialysis_report_h04.rpt" />
+    <Content Include="report\dialysis_report_h05.rpt" />
+    <Content Include="report\dialysis_report_h06.rpt" />
+    <Content Include="report\dialysis_report_h07.rpt" />
+    <Content Include="login.aspx" />
+    <Content Include="checkin\SchTable.aspx" />
+    <Content Include="Dialysis_Info.aspx" />
+    <Content Include="report\Rpt_View_ipad0.aspx" />
+    <Content Include="Scripts\checkin\SchTable.js" />
+    <Content Include="Scripts\ext-locale-zh-chs.js" />
+    <Content Include="Scripts\Stock\Dialysis_Stock_04.js" />
+    <Content Include="Scripts\Systems\Dialysis_System_01.js" />
+    <Content Include="Stock\Dialysis_Stock_04.aspx" />
+    <Content Include="Stock\Dialysis_Stock_03.aspx" />
+    <Content Include="Styles\dis_Btn40.png" />
+    <Content Include="Styles\Green_Btn40.png" />
+    <Content Include="Styles\logo_pic.jpg" />
+    <Content Include="Styles\logo_wj200.jpg" />
+    <Content Include="Styles\PNG\16\Add.png" />
+    <Content Include="Styles\PNG\16\Address_Book.png" />
+    <Content Include="Styles\PNG\16\Add_Green.png" />
+    <Content Include="Styles\PNG\16\Alert.png" />
+    <Content Include="Styles\PNG\16\Announcement.png" />
+    <Content Include="Styles\PNG\16\arrow.png" />
+    <Content Include="Styles\PNG\16\Back.png" />
+    <Content Include="Styles\PNG\16\Bin_Empty.png" />
+    <Content Include="Styles\PNG\16\Bin_Full.png" />
+    <Content Include="Styles\PNG\16\book.png" />
+    <Content Include="Styles\PNG\16\Box.png" />
+    <Content Include="Styles\PNG\16\Burn.png" />
+    <Content Include="Styles\PNG\16\cabinet.png" />
+    <Content Include="Styles\PNG\16\calendar.png" />
+    <Content Include="Styles\PNG\16\Calender.png" />
+    <Content Include="Styles\PNG\16\CD.png" />
+    <Content Include="Styles\PNG\16\Chat.png" />
+    <Content Include="Styles\PNG\16\Checkin.png" />
+    <Content Include="Styles\PNG\16\client.png" />
+    <Content Include="Styles\PNG\16\Clock.png" />
+    <Content Include="Styles\PNG\16\Close.png" />
+    <Content Include="Styles\PNG\16\Computer.png" />
+    <Content Include="Styles\PNG\16\Contact.png" />
+    <Content Include="Styles\PNG\16\database.png" />
+    <Content Include="Styles\PNG\16\Delete.png" />
+    <Content Include="Styles\PNG\16\Dialysis.png" />
+    <Content Include="Styles\PNG\16\DialysisWater.png" />
+    <Content Include="Styles\PNG\16\dialysis_info.png" />
+    <Content Include="Styles\PNG\16\Down.png" />
+    <Content Include="Styles\PNG\16\download.png" />
+    <Content Include="Styles\PNG\16\Edit.png" />
+    <Content Include="Styles\PNG\16\Exam.png" />
+    <Content Include="Styles\PNG\16\facebook.png" />
+    <Content Include="Styles\PNG\16\Favorite.png" />
+    <Content Include="Styles\PNG\16\Flag.png" />
+    <Content Include="Styles\PNG\16\Floppy.png" />
+    <Content Include="Styles\PNG\16\Folder.png" />
+    <Content Include="Styles\PNG\16\Folder_Open.png" />
+    <Content Include="Styles\PNG\16\Forward.png" />
+    <Content Include="Styles\PNG\16\graph.png" />
+    <Content Include="Styles\PNG\16\Help.png" />
+    <Content Include="Styles\PNG\16\home.png" />
+    <Content Include="Styles\PNG\16\Info.png" />
+    <Content Include="Styles\PNG\16\Key.png" />
+    <Content Include="Styles\PNG\16\lock.png" />
+    <Content Include="Styles\PNG\16\mail.png" />
+    <Content Include="Styles\PNG\16\Mail_Read.png" />
+    <Content Include="Styles\PNG\16\Music.png" />
+    <Content Include="Styles\PNG\16\Options.png" />
+    <Content Include="Styles\PNG\16\Paste.png" />
+    <Content Include="Styles\PNG\16\Patient_Book.png" />
+    <Content Include="Styles\PNG\16\pdf.png" />
+    <Content Include="Styles\PNG\16\people.png" />
+    <Content Include="Styles\PNG\16\phone.png" />
+    <Content Include="Styles\PNG\16\Pictures.png" />
+    <Content Include="Styles\PNG\16\piechart.png" />
+    <Content Include="Styles\PNG\16\Portfolio.png" />
+    <Content Include="Styles\PNG\16\Redo.png" />
+    <Content Include="Styles\PNG\16\Refresh.png" />
+    <Content Include="Styles\PNG\16\rss.png" />
+    <Content Include="Styles\PNG\16\search.png" />
+    <Content Include="Styles\PNG\16\Security.png" />
+    <Content Include="Styles\PNG\16\shopping-bag.png" />
+    <Content Include="Styles\PNG\16\Speaker.png" />
+    <Content Include="Styles\PNG\16\Stationery.png" />
+    <Content Include="Styles\PNG\16\Stats.png" />
+    <Content Include="Styles\PNG\16\Stop.png" />
+    <Content Include="Styles\PNG\16\survey.png" />
+    <Content Include="Styles\PNG\16\System.png" />
+    <Content Include="Styles\PNG\16\tag.png" />
+    <Content Include="Styles\PNG\16\Template.png" />
+    <Content Include="Styles\PNG\16\temporary.png" />
+    <Content Include="Styles\PNG\16\Tip.png" />
+    <Content Include="Styles\PNG\16\Tools.png" />
+    <Content Include="Styles\PNG\16\Tutorial.png" />
+    <Content Include="Styles\PNG\16\twitter.png" />
+    <Content Include="Styles\PNG\16\Undo.png" />
+    <Content Include="Styles\PNG\16\Up.png" />
+    <Content Include="Styles\PNG\16\upload.png" />
+    <Content Include="Styles\PNG\16\user.png" />
+    <Content Include="Styles\PNG\16\wallet.png" />
+    <Content Include="Styles\PNG\16\web.png" />
+    <Content Include="Styles\PNG\16\Window.png" />
+    <Content Include="Styles\PNG\16\Wizard.png" />
+    <Content Include="Styles\PNG\16\Write.png" />
+    <Content Include="Styles\PNG\32\Add_Green.png" />
+    <Content Include="Styles\PNG\32\Checkin.png" />
+    <Content Include="Styles\PNG\32\Dialysis.png" />
+    <Content Include="Styles\PNG\32\DialysisWater.png" />
+    <Content Include="Styles\PNG\32\dialysis_info.png" />
+    <Content Include="Styles\PNG\32\Exam.png" />
+    <Content Include="Styles\PNG\32\Patient_Book.png" />
+    <Content Include="Styles\PNG\32\temporary.png" />
+    <Content Include="Styles\PNG\32\upload.png" />
+    <Content Include="Styles\Red_Btn40.png" />
+    <Content Include="Systems\Dialysis_System_03.aspx" />
+    <Content Include="checkin\drug_mod.aspx" />
+    <Content Include="ipad_history_Henan.aspx" />
+    <Content Include="ipad_detaillist.aspx" />
+    <Content Include="ipad_detaillist02.aspx" />
+    <Content Include="ipad_detaillist_Alasamo.aspx" />
+    <Content Include="ipad_detaillist02_Alasamo.aspx" />
+    <Content Include="ipad_history_Alasamo.aspx" />
+    <Content Include="ipad_detaillist02_Hebei.aspx" />
+    <Content Include="ipad_EvaForm.aspx" />
+    <Content Include="ipad_detaillist_Hebei.aspx" />
+    <Content Include="ipad_history_Hebei.aspx" />
+    <Content Include="ipad_List.aspx" />
+    <Content Include="ipad_history_117.aspx" />
+    <Content Include="loginhenan.aspx" />
+    <Content Include="ipad_index.aspx" />
+    <Content Include="ipad_login.aspx" />
+    <Content Include="ipad_checkin.aspx" />
+    <Content Include="loginkey.aspx" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="report\dialysis_report_e04.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_e04.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dialysis_report_P117.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_P117.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="report\dialysis_report_PBody.rpt" />
+    <Content Include="report\dialysis_report_PHenan.rpt" />
+    <Content Include="report\dialysis_report_PSuzhou.rpt" />
+    <Content Include="report\dialysis_report_PurificationProcess.rpt" />
+    <Content Include="report\dialysis_report_PurificationProcessBody.rpt" />
+    <Content Include="report\dialysis_report_PurificationProcessSuzhou.rpt" />
+    <Content Include="report\dialysis_report_PXian.rpt" />
+    <Content Include="report\Dp report.rpt" />
+    <Content Include="report\Quality.rpt" />
+    <Content Include="report\report.rpt" />
+    <Content Include="report\report4.rpt" />
+    <Content Include="report\statistics.rpt" />
+    <Content Include="Restful\RestServiceImpl.svc" />
+    <Content Include="Stock\Dialysis_Stock_01.aspx" />
+    <Content Include="Stock\Dialysis_Stock.aspx" />
+    <Content Include="Stock\Dialysis_Stock_05.aspx" />
+    <Content Include="Stock\Dialysis_Stock_06.aspx" />
+    <Content Include="Stock\Dialysis_Stock_02.aspx" />
+    <Content Include="Styles\back.png" />
+    <Content Include="Styles\back2.png" />
+    <Content Include="Styles\back2over.png" />
+    <Content Include="Styles\backover.png" />
+    <Content Include="Styles\che_btn.png" />
+    <Content Include="Styles\ch_512.jpg" />
+    <Content Include="Styles\ch_PC.jpg" />
+    <Content Include="Styles\detail.png" />
+    <Content Include="Styles\detail01.png" />
+    <Content Include="Styles\detail01over.png" />
+    <Content Include="Styles\detail02.png" />
+    <Content Include="Styles\detail02over.png" />
+    <Content Include="Styles\detailover.png" />
+    <Content Include="Styles\dis_Btn.png" />
+    <Content Include="Styles\Green_Btn.png" />
+    <Content Include="Styles\home.png" />
+    <Content Include="Styles\homeover.png" />
+    <Content Include="Styles\logo.png" />
+    <Content Include="Styles\logo_pic1.jpg" />
+    <Content Include="Styles\logo_pic2.jpg" />
+    <Content Include="Styles\logo_pic3.jpg" />
+    <Content Include="Styles\logo_wj.jpg" />
+    <Content Include="Styles\mark1.jpg" />
+    <Content Include="Styles\nj_PAD.png" />
+    <Content Include="Styles\nj_PCCN.jpg" />
+    <Content Include="Styles\order.png" />
+    <Content Include="Styles\order_over.png" />
+    <Content Include="Styles\pic_01.jpg" />
+    <Content Include="Styles\pic_02.jpg" />
+    <Content Include="Styles\pic_03.jpg" />
+    <Content Include="Styles\pic_04.jpg" />
+    <Content Include="Styles\pic_05.jpg" />
+    <Content Include="Styles\pic_06.jpg" />
+    <Content Include="Styles\pic_07.jpg" />
+    <Content Include="Styles\PIC_1.jpg" />
+    <Content Include="Styles\PIC_2.jpg" />
+    <Content Include="Styles\PIC_3.jpg" />
+    <Content Include="Styles\PIC_4.jpg" />
+    <Content Include="Styles\PIC_5.jpg" />
+    <Content Include="Styles\PIC_6.jpg" />
+    <Content Include="Styles\PIC_7.jpg" />
+    <Content Include="Styles\PIC_8.jpg" />
+    <Content Include="Styles\PIC_arteriovenous_fistula.jpg" />
+    <Content Include="Styles\PIC_arteriovenous_graft_access.jpg" />
+    <Content Include="Styles\PIC_femoral_artery_L.JPG" />
+    <Content Include="Styles\PIC_femoral_artery_R.JPG" />
+    <Content Include="Styles\PIC_jugular_vein.JPG" />
+    <Content Include="Styles\PIC_subclavian_vein.JPG" />
+    <Content Include="Styles\PNG\32\Add.png" />
+    <Content Include="Styles\PNG\32\Address_Book.png" />
+    <Content Include="Styles\PNG\32\Alert.png" />
+    <Content Include="Styles\PNG\32\Announcement.png" />
+    <Content Include="Styles\PNG\32\arrow.png" />
+    <Content Include="Styles\PNG\32\Back.png" />
+    <Content Include="Styles\PNG\32\Bin_Empty.png" />
+    <Content Include="Styles\PNG\32\Bin_Full.png" />
+    <Content Include="Styles\PNG\32\book.png" />
+    <Content Include="Styles\PNG\32\Box.png" />
+    <Content Include="Styles\PNG\32\Burn.png" />
+    <Content Include="Styles\PNG\32\cabinet.png" />
+    <Content Include="Styles\PNG\32\calendar.png" />
+    <Content Include="Styles\PNG\32\Calender.png" />
+    <Content Include="Styles\PNG\32\CD.png" />
+    <Content Include="Styles\PNG\32\Chat.png" />
+    <Content Include="Styles\PNG\32\client.png" />
+    <Content Include="Styles\PNG\32\Clock.png" />
+    <Content Include="Styles\PNG\32\Close.png" />
+    <Content Include="Styles\PNG\32\Computer.png" />
+    <Content Include="Styles\PNG\32\Contact.png" />
+    <Content Include="Styles\PNG\32\database.png" />
+    <Content Include="Styles\PNG\32\Delete.png" />
+    <Content Include="Styles\PNG\32\Down.png" />
+    <Content Include="Styles\PNG\32\download.png" />
+    <Content Include="Styles\PNG\32\Edit.png" />
+    <Content Include="Styles\PNG\32\facebook.png" />
+    <Content Include="Styles\PNG\32\Favorite.png" />
+    <Content Include="Styles\PNG\32\Flag.png" />
+    <Content Include="Styles\PNG\32\Floppy.png" />
+    <Content Include="Styles\PNG\32\Folder.png" />
+    <Content Include="Styles\PNG\32\Folder_Open.png" />
+    <Content Include="Styles\PNG\32\Forward.png" />
+    <Content Include="Styles\PNG\32\graph.png" />
+    <Content Include="Styles\PNG\32\Help.png" />
+    <Content Include="Styles\PNG\32\home.png" />
+    <Content Include="Styles\PNG\32\Info.png" />
+    <Content Include="Styles\PNG\32\Key.png" />
+    <Content Include="Styles\PNG\32\lock.png" />
+    <Content Include="Styles\PNG\32\mail.png" />
+    <Content Include="Styles\PNG\32\Mail_Read.png" />
+    <Content Include="Styles\PNG\32\Music.png" />
+    <Content Include="Styles\PNG\32\Options.png" />
+    <Content Include="Styles\PNG\32\Paste.png" />
+    <Content Include="Styles\PNG\32\pdf.png" />
+    <Content Include="Styles\PNG\32\people.png" />
+    <Content Include="Styles\PNG\32\phone.png" />
+    <Content Include="Styles\PNG\32\Pictures.png" />
+    <Content Include="Styles\PNG\32\piechart.png" />
+    <Content Include="Styles\PNG\32\Portfolio.png" />
+    <Content Include="Styles\PNG\32\Redo.png" />
+    <Content Include="Styles\PNG\32\Refresh.png" />
+    <Content Include="Styles\PNG\32\rss.png" />
+    <Content Include="Styles\PNG\32\search.png" />
+    <Content Include="Styles\PNG\32\Security.png" />
+    <Content Include="Styles\PNG\32\shopping-bag.png" />
+    <Content Include="Styles\PNG\32\Speaker.png" />
+    <Content Include="Styles\PNG\32\Stationery.png" />
+    <Content Include="Styles\PNG\32\Stats.png" />
+    <Content Include="Styles\PNG\32\Stop.png" />
+    <Content Include="Styles\PNG\32\survey.png" />
+    <Content Include="Styles\PNG\32\System.png" />
+    <Content Include="Styles\PNG\32\tag.png" />
+    <Content Include="Styles\PNG\32\Template.png" />
+    <Content Include="Styles\PNG\32\Tip.png" />
+    <Content Include="Styles\PNG\32\Tools.png" />
+    <Content Include="Styles\PNG\32\Tutorial.png" />
+    <Content Include="Styles\PNG\32\twitter.png" />
+    <Content Include="Styles\PNG\32\Undo.png" />
+    <Content Include="Styles\PNG\32\Up.png" />
+    <Content Include="Styles\PNG\32\user.png" />
+    <Content Include="Styles\PNG\32\wallet.png" />
+    <Content Include="Styles\PNG\32\web.png" />
+    <Content Include="Styles\PNG\32\Window.png" />
+    <Content Include="Styles\PNG\32\Wizard.png" />
+    <Content Include="Styles\PNG\32\Write.png" />
+    <Content Include="Styles\Red_Btn.png" />
+    <Content Include="Styles\save.png" />
+    <Content Include="Styles\savebp.png" />
+    <Content Include="Styles\savebpover.png" />
+    <Content Include="Styles\saveover.png" />
+    <Content Include="Styles\savesm.png" />
+    <Content Include="Styles\savesmover.png" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Styles\topbg6A.png" />
+    <Content Include="Styles\trigger.png" />
+    <Content Include="Styles\home1.png" />
+    <Content Include="Styles\homeover1.png" />
+    <Content Include="Styles\NC2.jpg" />
+    <Content Include="Styles\visit300.jpg" />
+    <Content Include="Systems\Config.aspx" />
+    <Content Include="Systems\Dialysis_System_05.aspx" />
+    <Content Include="Systems\Dialysis_System_01.aspx" />
+    <Content Include="Systems\Dialysis_System_04.aspx" />
+    <Content Include="Systems\Dialysis_System_02.aspx" />
+    <Content Include="Systems\Dialysis_System_06.aspx" />
+    <Content Include="Systems\Dialysis_System_07.aspx" />
+    <Content Include="Systems\login.aspx" />
+    <Content Include="Systems\Dialysis_System_08.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="ipad_detaillist02_Xian.aspx" />
+    <Content Include="ipad_detaillist_Xian.aspx" />
+    <Content Include="ipad_detaillist02_Henan.aspx" />
+    <Content Include="ipad_detaillist_Henan.aspx" />
+    <EmbeddedResource Include="report\dialysis_report_s02.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_s02.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dialysis_report_s03.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_s03.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dialysis_report_s04.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_s04.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dialysis_report_s01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_s01.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="report\QualityEvaluation.rpt">
+      <LastGenOutput>QualityEvaluation.cs</LastGenOutput>
+    </Content>
+    <Content Include="report\report4_Alasamo.rpt">
+      <LastGenOutput>report4_Alasamo.cs</LastGenOutput>
+    </Content>
+    <Content Include="report\dialysis_report_PAlasamo.rpt" />
+    <Content Include="report\dialysis_report_PHebei.rpt" />
+    <Content Include="report\dialysis_report_HebeiList.rpt" />
+    <EmbeddedResource Include="report\dialysis_report_checkin.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_checkin.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dialysis_report_s05.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_s05.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dialysis_report_a09.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_a09.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="report\report_f06_Alasamo.rpt">
+      <LastGenOutput>report_f06_Alasamo.cs</LastGenOutput>
+    </Content>
+    <EmbeddedResource Include="report\dialysis_report_weeksch.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_weeksch.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dialysis_report_drug_term.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\report_HTest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report_HTest.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="report\dialysis_report_PLuyi.rpt" />
+    <Content Include="report\QualityEvaluationMonth.rpt">
+      <LastGenOutput>QualityEvaluationMonth.cs</LastGenOutput>
+    </Content>
+    <Content Include="report\dialysis_report_j01.rpt">
+      <LastGenOutput>dialysis_report_j01.cs</LastGenOutput>
+    </Content>
+    <Content Include="report\dialysis_report_j01_1.rpt">
+      <LastGenOutput>dialysis_report_j01_1.cs</LastGenOutput>
+    </Content>
+    <Content Include="report\dialysis_report_j01_2.rpt">
+      <LastGenOutput>dialysis_report_j01_2.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="appointment.aspx.cs">
+      <DependentUpon>appointment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="appointment.aspx.designer.cs">
+      <DependentUpon>appointment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm.aspx.cs">
+      <DependentUpon>BaseForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseForm.aspx.designer.cs">
+      <DependentUpon>BaseForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\DialysisTwoWeekList.aspx.cs">
+      <DependentUpon>DialysisTwoWeekList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\DialysisTwoWeekList.aspx.designer.cs">
+      <DependentUpon>DialysisTwoWeekList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Dialysis_Question4.aspx.cs">
+      <DependentUpon>Dialysis_Question4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Dialysis_Question4.aspx.designer.cs">
+      <DependentUpon>Dialysis_Question4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSet.aspx.cs">
+      <DependentUpon>Dialysis_PreSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSet.aspx.designer.cs">
+      <DependentUpon>Dialysis_PreSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Get_Material.aspx.cs">
+      <DependentUpon>Get_Material.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Get_Material.aspx.designer.cs">
+      <DependentUpon>Get_Material.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\DrugMod_List.ascx.cs">
+      <DependentUpon>DrugMod_List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\DrugMod_List.ascx.designer.cs">
+      <DependentUpon>DrugMod_List.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\drug_trub.aspx.cs">
+      <DependentUpon>drug_trub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\drug_trub.aspx.designer.cs">
+      <DependentUpon>drug_trub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\TempPatient.aspx.cs">
+      <DependentUpon>TempPatient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\SchMenu.aspx.cs">
+      <DependentUpon>SchMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\SchMenu.aspx.designer.cs">
+      <DependentUpon>SchMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Dialysis_Info.aspx.cs">
+      <DependentUpon>Dialysis_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Dialysis_Info.aspx.designer.cs">
+      <DependentUpon>Dialysis_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetBase.aspx.cs">
+      <DependentUpon>Dialysis_PreSetBase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetBase.aspx.designer.cs">
+      <DependentUpon>Dialysis_PreSetBase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetView.aspx.cs">
+      <DependentUpon>Dialysis_PreSetView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetView.aspx.designer.cs">
+      <DependentUpon>Dialysis_PreSetView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Drug.cs" />
+    <Compile Include="checkin\DrugMod_ListAll.ascx.cs">
+      <DependentUpon>DrugMod_ListAll.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\DrugMod_ListAll.ascx.designer.cs">
+      <DependentUpon>DrugMod_ListAll.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Drugs.ashx.cs">
+      <DependentUpon>Drugs.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Patient_detail.aspx.cs">
+      <DependentUpon>Patient_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Patient_detail.aspx.designer.cs">
+      <DependentUpon>Patient_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\TempPatient.aspx.designer.cs">
+      <DependentUpon>TempPatient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\TempPatient_Tab.aspx.cs">
+      <DependentUpon>TempPatient_Tab.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\TempPatient_Tab.aspx.designer.cs">
+      <DependentUpon>TempPatient_Tab.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetSch.aspx.cs">
+      <DependentUpon>Dialysis_PreSetSch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetSch.aspx.designer.cs">
+      <DependentUpon>Dialysis_PreSetSch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Patient_Drug.aspx.cs">
+      <DependentUpon>Patient_Drug.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Patient_Drug.aspx.designer.cs">
+      <DependentUpon>Patient_Drug.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Dialysis_ModPreSet.aspx.cs">
+      <DependentUpon>Dialysis_ModPreSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Dialysis_ModPreSet.aspx.designer.cs">
+      <DependentUpon>Dialysis_ModPreSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\drug_trub_package.aspx.cs">
+      <DependentUpon>drug_trub_package.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\drug_trub_package.aspx.designer.cs">
+      <DependentUpon>drug_trub_package.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Patient_Info.aspx.cs">
+      <DependentUpon>Patient_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Patient_Info.aspx.designer.cs">
+      <DependentUpon>Patient_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Get_Drug.aspx.cs">
+      <DependentUpon>Get_Drug.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Get_Drug.aspx.designer.cs">
+      <DependentUpon>Get_Drug.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\TempPatient_Sch.aspx.cs">
+      <DependentUpon>TempPatient_Sch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\TempPatient_Sch.aspx.designer.cs">
+      <DependentUpon>TempPatient_Sch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\TempPatient_Sch1.aspx.cs">
+      <DependentUpon>TempPatient_Sch1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\TempPatient_Sch1.aspx.designer.cs">
+      <DependentUpon>TempPatient_Sch1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\SchTableEdit.aspx.cs">
+      <DependentUpon>SchTableEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\SchTableEdit.aspx.designer.cs">
+      <DependentUpon>SchTableEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Get_PatMList.aspx.cs">
+      <DependentUpon>Get_PatMList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Get_PatMList.aspx.designer.cs">
+      <DependentUpon>Get_PatMList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\SearchPSch.aspx.cs">
+      <DependentUpon>SearchPSch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\SearchPSch.aspx.designer.cs">
+      <DependentUpon>SearchPSch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetLong.aspx.cs">
+      <DependentUpon>Dialysis_PreSetLong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetLong.aspx.designer.cs">
+      <DependentUpon>Dialysis_PreSetLong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetShort.aspx.cs">
+      <DependentUpon>Dialysis_PreSetShort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Dialysis_PreSetShort.aspx.designer.cs">
+      <DependentUpon>Dialysis_PreSetShort.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\PSchInsert.aspx.cs">
+      <DependentUpon>PSchInsert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\PSchInsert.aspx.designer.cs">
+      <DependentUpon>PSchInsert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetDialysis.cs">
+      <DependentUpon>DataSetDialysis.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetDialysis.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetDialysis.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device.aspx.cs">
+      <DependentUpon>Dialysis_Device.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device.aspx.designer.cs">
+      <DependentUpon>Dialysis_Device.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_01.aspx.cs">
+      <DependentUpon>Dialysis_Device_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_Device_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_02.aspx.cs">
+      <DependentUpon>Dialysis_Device_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_Device_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_04.aspx.cs">
+      <DependentUpon>Dialysis_Device_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_Device_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_05.aspx.cs">
+      <DependentUpon>Dialysis_Device_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_Device_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_03.aspx.cs">
+      <DependentUpon>Dialysis_Device_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_Device_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_06.aspx.cs">
+      <DependentUpon>Dialysis_Device_06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Device\Dialysis_Device_06.aspx.designer.cs">
+      <DependentUpon>Dialysis_Device_06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dialysis_Schedul.aspx.cs">
+      <DependentUpon>Dialysis_Schedul.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dialysis_Schedul.aspx.designer.cs">
+      <DependentUpon>Dialysis_Schedul.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs" />
+    <Compile Include="Doctors.ashx.cs">
+      <DependentUpon>Doctors.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Fhir\UploadAdminALL.cs" />
+    <Compile Include="Fhir\UploadClinicalALL.cs" />
+    <Compile Include="Fhir\UploadMedicationALL.cs" />
+    <Compile Include="Fhir\UserInfoGroupLab.cs" />
+    <Compile Include="Fhir\UserInfoObs.cs" />
+    <Compile Include="Fhir\UsrInf_Cond_zinfo_a_01.cs" />
+    <Compile Include="Fhir\UsrInf_Cond_zinfo_a_02.cs" />
+    <Compile Include="Fhir\UsrInf_Cond_zinfo_a_03.cs" />
+    <Compile Include="Fhir\UsrInf_Cond_zinfo_a_04.cs" />
+    <Compile Include="Fhir\UsrInf_Cond_zinfo_a_05.cs" />
+    <Compile Include="Fhir\UsrInf_Cond_zinfo_a_06.cs" />
+    <Compile Include="Fhir\UsrInf_Cond_zinfo_a_07.cs" />
+    <Compile Include="Information\ClassAuditEvent.cs" />
+    <Compile Include="Information\ClassAuditHistory.cs" />
+    <Compile Include="Information\ClassMedicationAudit.cs" />
+    <Compile Include="checkin\Material_List.aspx.cs">
+      <DependentUpon>Material_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\Material_List.aspx.designer.cs">
+      <DependentUpon>Material_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\DialysisClientUpLoad.cs" />
+    <Compile Include="Information\Dialysis_05_04_Add.aspx.cs">
+      <DependentUpon>Dialysis_05_04_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_04_Add.aspx.designer.cs">
+      <DependentUpon>Dialysis_05_04_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_06_Alasamo.aspx.cs">
+      <DependentUpon>Dialysis_06_06_Alasamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_06_Alasamo.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_06_Alasamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_06_Alasamo_List.aspx.cs">
+      <DependentUpon>Dialysis_06_06_Alasamo_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_06_Alasamo_List.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_06_Alasamo_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_08.aspx.cs">
+      <DependentUpon>Dialysis_08.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_08.aspx.designer.cs">
+      <DependentUpon>Dialysis_08.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_03.aspx.cs">
+      <DependentUpon>Dialysis_09_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_04_Xian.aspx.cs">
+      <DependentUpon>Dialysis_09_04_Xian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_04_Xian.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_04_Xian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_08.aspx.cs">
+      <DependentUpon>Dialysis_0h_08.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_08.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_08.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_117.aspx.cs">
+      <DependentUpon>Dialysis_09_01_117.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_117.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_117.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_117S.aspx.cs">
+      <DependentUpon>Dialysis_09_01_117S.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_117S.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_117S.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_All.aspx.cs">
+      <DependentUpon>Dialysis_09_01_All.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_All.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_All.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Flex.aspx.cs">
+      <DependentUpon>Dialysis_09_01_Flex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Flex.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_Flex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_SuzhouS.aspx.cs">
+      <DependentUpon>Dialysis_09_01_SuzhouS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_SuzhouS.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_SuzhouS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_XianS.aspx.cs">
+      <DependentUpon>Dialysis_09_01_XianS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_XianS.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_XianS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10.aspx.cs">
+      <DependentUpon>Dialysis_10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10.aspx.designer.cs">
+      <DependentUpon>Dialysis_10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_C01.aspx.cs">
+      <DependentUpon>Dialysis_10_C01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_C01.aspx.designer.cs">
+      <DependentUpon>Dialysis_10_C01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_help.aspx.cs">
+      <DependentUpon>Dialysis_help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Biochemical_Not_Checked_List.aspx.cs">
+      <DependentUpon>Biochemical_Not_Checked_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Biochemical_Not_Checked_List.aspx.designer.cs">
+      <DependentUpon>Biochemical_Not_Checked_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_02_detail.aspx.cs">
+      <DependentUpon>Dialysis_09_02_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_02_detail.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_02_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_01.aspx.cs">
+      <DependentUpon>Dialysis_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_01.aspx.cs">
+      <DependentUpon>Dialysis_01_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_01_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_02.aspx.cs">
+      <DependentUpon>Dialysis_01_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_01_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_03.aspx.cs">
+      <DependentUpon>Dialysis_01_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_01_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_04.aspx.cs">
+      <DependentUpon>Dialysis_01_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_01_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_05.aspx.cs">
+      <DependentUpon>Dialysis_01_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_01_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_06.aspx.cs">
+      <DependentUpon>Dialysis_01_06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_06.aspx.designer.cs">
+      <DependentUpon>Dialysis_01_06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_07.aspx.cs">
+      <DependentUpon>Dialysis_01_07.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_01_07.aspx.designer.cs">
+      <DependentUpon>Dialysis_01_07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02.aspx.cs">
+      <DependentUpon>Dialysis_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_01.aspx.cs">
+      <DependentUpon>Dialysis_02_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_02_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_02.aspx.cs">
+      <DependentUpon>Dialysis_02_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_02_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_03.aspx.cs">
+      <DependentUpon>Dialysis_02_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_02_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_031.aspx.cs">
+      <DependentUpon>Dialysis_02_031.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_031.aspx.designer.cs">
+      <DependentUpon>Dialysis_02_031.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_04.aspx.cs">
+      <DependentUpon>Dialysis_02_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_02_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_041.aspx.cs">
+      <DependentUpon>Dialysis_02_041.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_041.aspx.designer.cs">
+      <DependentUpon>Dialysis_02_041.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_05.aspx.cs">
+      <DependentUpon>Dialysis_02_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_02_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_06.aspx.cs">
+      <DependentUpon>Dialysis_02_06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_06.aspx.designer.cs">
+      <DependentUpon>Dialysis_02_06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_07.aspx.cs">
+      <DependentUpon>Dialysis_02_07.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_02_07.aspx.designer.cs">
+      <DependentUpon>Dialysis_02_07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_03.aspx.cs">
+      <DependentUpon>Dialysis_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_01.aspx.cs">
+      <DependentUpon>Dialysis_03_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_03_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_02.aspx.cs">
+      <DependentUpon>Dialysis_03_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_03_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_03.aspx.cs">
+      <DependentUpon>Dialysis_03_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_03_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_04.aspx.cs">
+      <DependentUpon>Dialysis_03_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_03_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_05.aspx.cs">
+      <DependentUpon>Dialysis_03_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_03_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_06.aspx.cs">
+      <DependentUpon>Dialysis_03_06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_06.aspx.designer.cs">
+      <DependentUpon>Dialysis_03_06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_07.aspx.cs">
+      <DependentUpon>Dialysis_03_07.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_03_07.aspx.designer.cs">
+      <DependentUpon>Dialysis_03_07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_04.aspx.cs">
+      <DependentUpon>Dialysis_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_04_02.aspx.cs">
+      <DependentUpon>Dialysis_04_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_04_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_04_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_05.aspx.cs">
+      <DependentUpon>Dialysis_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_01.aspx.cs">
+      <DependentUpon>Dialysis_05_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_05_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_02.aspx.cs">
+      <DependentUpon>Dialysis_05_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_05_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06.aspx.cs">
+      <DependentUpon>Dialysis_06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06.aspx.designer.cs">
+      <DependentUpon>Dialysis_06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_01.aspx.cs">
+      <DependentUpon>Dialysis_06_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_011.aspx.cs">
+      <DependentUpon>Dialysis_06_011.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_011.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_011.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_012.aspx.cs">
+      <DependentUpon>Dialysis_06_012.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_012.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_012.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_02.aspx.cs">
+      <DependentUpon>Dialysis_06_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_04.aspx.cs">
+      <DependentUpon>Dialysis_06_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_05.aspx.cs">
+      <DependentUpon>Dialysis_06_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_07.aspx.cs">
+      <DependentUpon>Dialysis_07.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_07.aspx.designer.cs">
+      <DependentUpon>Dialysis_07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_07_02.aspx.cs">
+      <DependentUpon>Dialysis_07_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_07_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_07_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_081.aspx.cs">
+      <DependentUpon>Dialysis_081.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_081.aspx.designer.cs">
+      <DependentUpon>Dialysis_081.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09.aspx.cs">
+      <DependentUpon>Dialysis_09.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09.aspx.designer.cs">
+      <DependentUpon>Dialysis_09.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_02.aspx.cs">
+      <DependentUpon>Dialysis_09_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_02_detail_Editor.ascx.cs">
+      <DependentUpon>Dialysis_09_02_detail_Editor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_02_detail_Editor.ascx.designer.cs">
+      <DependentUpon>Dialysis_09_02_detail_Editor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_03_New.aspx.cs">
+      <DependentUpon>Dialysis_09_03_New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_03_New.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_03_New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_21.aspx.cs">
+      <DependentUpon>Dialysis_09_21.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_21.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_21.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_22.aspx.cs">
+      <DependentUpon>Dialysis_09_22.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_22.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_22.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_23.aspx.cs">
+      <DependentUpon>Dialysis_09_23.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_23.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_23.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_24.aspx.cs">
+      <DependentUpon>Dialysis_09_24.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_24.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_24.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_25.aspx.cs">
+      <DependentUpon>Dialysis_09_25.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_25.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_25.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_26.aspx.cs">
+      <DependentUpon>Dialysis_09_26.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_26.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_26.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h.aspx.cs">
+      <DependentUpon>Dialysis_0h.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_01.aspx.cs">
+      <DependentUpon>Dialysis_0h_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_02.aspx.cs">
+      <DependentUpon>Dialysis_0h_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_03.aspx.cs">
+      <DependentUpon>Dialysis_0h_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_04.aspx.cs">
+      <DependentUpon>Dialysis_0h_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_05.aspx.cs">
+      <DependentUpon>Dialysis_0h_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_06.aspx.cs">
+      <DependentUpon>Dialysis_0h_06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_06.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_07.aspx.cs">
+      <DependentUpon>Dialysis_0h_07.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_07.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_12.aspx.cs">
+      <DependentUpon>Dialysis_12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_12.aspx.designer.cs">
+      <DependentUpon>Dialysis_12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_12_01.aspx.cs">
+      <DependentUpon>Dialysis_12_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_12_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_12_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_12_02.aspx.cs">
+      <DependentUpon>Dialysis_12_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_12_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_12_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_13_new.aspx.cs">
+      <DependentUpon>Dialysis_13_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_13_new.aspx.designer.cs">
+      <DependentUpon>Dialysis_13_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_help.aspx.designer.cs">
+      <DependentUpon>Dialysis_help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_Info.aspx.cs">
+      <DependentUpon>Dialysis_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_Info.aspx.designer.cs">
+      <DependentUpon>Dialysis_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\dry_weight_Chart.aspx.cs">
+      <DependentUpon>dry_weight_Chart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\dry_weight_Chart.aspx.designer.cs">
+      <DependentUpon>dry_weight_Chart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\dry_weight.aspx.cs">
+      <DependentUpon>dry_weight.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\dry_weight.aspx.designer.cs">
+      <DependentUpon>dry_weight.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\dry_weightlist.aspx.cs">
+      <DependentUpon>dry_weightlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\dry_weightlist.aspx.designer.cs">
+      <DependentUpon>dry_weightlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Suzhou.aspx.cs">
+      <DependentUpon>Dialysis_09_01_Suzhou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Suzhou.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_Suzhou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Xian.aspx.cs">
+      <DependentUpon>Dialysis_09_01_Xian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Xian.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_Xian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_StandardS.aspx.cs">
+      <DependentUpon>Dialysis_09_01_StandardS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_StandardS.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_StandardS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Standard.aspx.cs">
+      <DependentUpon>Dialysis_09_01_Standard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Standard.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_Standard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\PatEdit.aspx.cs">
+      <DependentUpon>PatEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\PatEdit.aspx.designer.cs">
+      <DependentUpon>PatEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Pat_info_list.aspx.cs">
+      <DependentUpon>Pat_info_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Pat_info_list.aspx.designer.cs">
+      <DependentUpon>Pat_info_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\pat_stats.aspx.cs">
+      <DependentUpon>pat_stats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\pat_stats.aspx.designer.cs">
+      <DependentUpon>pat_stats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Biochemical_Indicators_list.aspx.cs">
+      <DependentUpon>Biochemical_Indicators_list.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Biochemical_Indicators_list.aspx.designer.cs">
+      <DependentUpon>Biochemical_Indicators_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_04_00.aspx.cs">
+      <DependentUpon>Dialysis_04_00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_04_00.aspx.designer.cs">
+      <DependentUpon>Dialysis_04_00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_04_01.aspx.cs">
+      <DependentUpon>Dialysis_04_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_04_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_04_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Biochemical_Not_Checked_List_V2.aspx.cs">
+      <DependentUpon>Biochemical_Not_Checked_List_V2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Biochemical_Not_Checked_List_V2.aspx.designer.cs">
+      <DependentUpon>Biochemical_Not_Checked_List_V2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\DialysisTwoWeekList.aspx.cs">
+      <DependentUpon>DialysisTwoWeekList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\DialysisTwoWeekList.aspx.designer.cs">
+      <DependentUpon>DialysisTwoWeekList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\DialysisFhirClient.aspx.cs">
+      <DependentUpon>DialysisFhirClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\DialysisFhirClient.aspx.designer.cs">
+      <DependentUpon>DialysisFhirClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Henan.aspx.cs">
+      <DependentUpon>Dialysis_09_01_Henan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_Henan.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_Henan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_HenanS.aspx.cs">
+      <DependentUpon>Dialysis_09_01_HenanS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_01_HenanS.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_01_HenanS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_04.aspx.cs">
+      <DependentUpon>Dialysis_09_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_03.aspx.cs">
+      <DependentUpon>Dialysis_05_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_05_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_04.aspx.cs">
+      <DependentUpon>Dialysis_05_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_05_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_041.aspx.cs">
+      <DependentUpon>Dialysis_05_041.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_05_041.aspx.designer.cs">
+      <DependentUpon>Dialysis_05_041.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_08_List.aspx.cs">
+      <DependentUpon>Dialysis_0h_08_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_08_List.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_08_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_08_Edit.aspx.cs">
+      <DependentUpon>Dialysis_0h_08_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_0h_08_Edit.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_08_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_012_Alasamo.aspx.cs">
+      <DependentUpon>Dialysis_06_012_Alasamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_012_Alasamo.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_012_Alasamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_02_Alasamo.aspx.cs">
+      <DependentUpon>Dialysis_06_02_Alasamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_02_Alasamo.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_02_Alasamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_04_Alasamo.aspx.cs">
+      <DependentUpon>Dialysis_06_04_Alasamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_04_Alasamo.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_04_Alasamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Lab_Abnormal_Chart.aspx.cs">
+      <DependentUpon>Lab_Abnormal_Chart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Lab_Abnormal_Chart.aspx.designer.cs">
+      <DependentUpon>Lab_Abnormal_Chart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_05_Alasamo.aspx.cs">
+      <DependentUpon>Dialysis_06_05_Alasamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_06_05_Alasamo.aspx.designer.cs">
+      <DependentUpon>Dialysis_06_05_Alasamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_I_Alasamo_List.aspx.cs">
+      <DependentUpon>Dialysis_10_I_Alasamo_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_I_Alasamo_List.aspx.designer.cs">
+      <DependentUpon>Dialysis_10_I_Alasamo_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_00_List.aspx.cs">
+      <DependentUpon>Dialysis_09_00_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_00_List.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_00_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_00_Add.aspx.cs">
+      <DependentUpon>Dialysis_09_00_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_00_Add.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_00_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_00_Edit.aspx.cs">
+      <DependentUpon>Dialysis_09_00_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_09_00_Edit.aspx.designer.cs">
+      <DependentUpon>Dialysis_09_00_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_B01.aspx.cs">
+      <DependentUpon>Dialysis_10_B01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_B01.aspx.designer.cs">
+      <DependentUpon>Dialysis_10_B01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_B10.aspx.cs">
+      <DependentUpon>Dialysis_10_B10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_B10.aspx.designer.cs">
+      <DependentUpon>Dialysis_10_B10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_B11.aspx.cs">
+      <DependentUpon>Dialysis_10_B11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_B11.aspx.designer.cs">
+      <DependentUpon>Dialysis_10_B11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_B13.aspx.cs">
+      <DependentUpon>Dialysis_10_B13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_B13.aspx.designer.cs">
+      <DependentUpon>Dialysis_10_B13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_D01.aspx.cs">
+      <DependentUpon>Dialysis_10_D01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_D01.aspx.designer.cs">
+      <DependentUpon>Dialysis_10_D01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_G01.aspx.cs">
+      <DependentUpon>Dialysis_10_G01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_G01.aspx.designer.cs">
+      <DependentUpon>Dialysis_10_G01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_K01.aspx.cs">
+      <DependentUpon>Dialysis_10_K01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Information\Dialysis_10_K01.aspx.designer.cs">
+      <DependentUpon>Dialysis_10_K01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_01.aspx.cs">
+      <DependentUpon>Dialysis_0h_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_02.aspx.cs">
+      <DependentUpon>Dialysis_0h_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_03.aspx.cs">
+      <DependentUpon>Dialysis_0h_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_04.aspx.cs">
+      <DependentUpon>Dialysis_0h_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_05.aspx.cs">
+      <DependentUpon>Dialysis_0h_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_06.aspx.cs">
+      <DependentUpon>Dialysis_0h_06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_06.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_07.aspx.cs">
+      <DependentUpon>Dialysis_0h_07.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ipad\Dialysis_0h_07.aspx.designer.cs">
+      <DependentUpon>Dialysis_0h_07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ipad\ipad_PreSetShort.aspx.cs">
+      <DependentUpon>ipad_PreSetShort.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ipad\ipad_PreSetShort.aspx.designer.cs">
+      <DependentUpon>ipad_PreSetShort.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ipad\ipad_PreSetLong.aspx.cs">
+      <DependentUpon>ipad_PreSetLong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ipad\ipad_PreSetLong.aspx.designer.cs">
+      <DependentUpon>ipad_PreSetLong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_Default.aspx.cs">
+      <DependentUpon>ipad_Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_Default.aspx.designer.cs">
+      <DependentUpon>ipad_Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist02_117.aspx.cs">
+      <DependentUpon>ipad_detaillist02_117.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist02_117.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist02_117.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Standard.aspx.cs">
+      <DependentUpon>ipad_detaillist02_Standard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Standard.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist02_Standard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Suzhou.aspx.cs">
+      <DependentUpon>ipad_detaillist02_Suzhou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Suzhou.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist02_Suzhou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist_117.aspx.cs">
+      <DependentUpon>ipad_detaillist_117.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist_117.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist_117.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist_Standard.aspx.cs">
+      <DependentUpon>ipad_detaillist_Standard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist_Standard.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist_Standard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist_Suzhou.aspx.cs">
+      <DependentUpon>ipad_detaillist_Suzhou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist_Suzhou.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist_Suzhou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_EvaForm_Suzhou.aspx.cs">
+      <DependentUpon>ipad_EvaForm_Suzhou.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_EvaForm_Suzhou.aspx.designer.cs">
+      <DependentUpon>ipad_EvaForm_Suzhou.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_PatientList.aspx.cs">
+      <DependentUpon>ipad_PatientList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_PatientList.aspx.designer.cs">
+      <DependentUpon>ipad_PatientList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="i_pad_ordershortdrug.aspx.cs">
+      <DependentUpon>i_pad_ordershortdrug.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="i_pad_ordershortdrug.aspx.designer.cs">
+      <DependentUpon>i_pad_ordershortdrug.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login117.aspx.cs">
+      <DependentUpon>login117.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login117.aspx.designer.cs">
+      <DependentUpon>login117.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginXian.aspx.cs">
+      <DependentUpon>loginXian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginXian.aspx.designer.cs">
+      <DependentUpon>loginXian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Patinfo.cs" />
+    <Compile Include="Patinfos.ashx.cs">
+      <DependentUpon>Patinfos.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="PracInfo.cs" />
+    <Compile Include="PracInfos.ashx.cs">
+      <DependentUpon>PracInfos.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\EnumExtention.cs" />
+    <Compile Include="Properties\Message.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="report\All report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>All report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\Ap report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ap report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\data2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>data2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\data22.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>data22.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\data22HDF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>data22HDF.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\data23.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>data23.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\Dc report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dc report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\data1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>data1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report4B.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report4B.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_age.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_age.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_age2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_age2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_cnt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_cnt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_cnt2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_cnt2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_cntA.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_cntA.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_dry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_dry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_e01.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_e01.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_e011.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_e011.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_e04.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_e04.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_err.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_err.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_err2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_err2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_err2A.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_err2A.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_h01.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_h01.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_h02.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_h02.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_h03.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_h03.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_h04.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_h04.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_h05.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_h05.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_h06.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_h06.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_h07.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_h07.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_h08.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_h08.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_P117.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_P117.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_PBody.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_PHenan.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_PSuzhou.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_PurificationProcess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_PurificationProcess.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_PurificationProcessBody.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_PurificationProcessBody.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_PurificationProcessSuzhou.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_PurificationProcessSuzhou.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_PXian.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_s02.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dialysis_report_s02.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\Dp report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dp report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\Quality.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Quality.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\report4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>report4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\Report_Dialysis_h.aspx.cs">
+      <DependentUpon>Report_Dialysis_h.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="report\Report_Dialysis_h.aspx.designer.cs">
+      <DependentUpon>Report_Dialysis_h.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\Rpt_View_Dialysis.aspx.cs">
+      <DependentUpon>Rpt_View_Dialysis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="report\Rpt_View_Dialysis.aspx.designer.cs">
+      <DependentUpon>Rpt_View_Dialysis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\Rpt_View_ipad0.aspx.cs">
+      <DependentUpon>Rpt_View_ipad0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="report\Rpt_View_ipad0.aspx.designer.cs">
+      <DependentUpon>Rpt_View_ipad0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\statistics.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>statistics.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="report\dialysis_report_s03.cs">
+      <DependentUpon>dialysis_report_s03.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_s04.cs">
+      <DependentUpon>dialysis_report_s04.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_s01.cs">
+      <DependentUpon>dialysis_report_s01.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\QualityEvaluation.cs">
+      <DependentUpon>QualityEvaluation.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\report4_Alasamo.cs">
+      <DependentUpon>report4_Alasamo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_checkin.cs">
+      <DependentUpon>dialysis_report_checkin.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_s05.cs">
+      <DependentUpon>dialysis_report_s05.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_a09.cs">
+      <DependentUpon>dialysis_report_a09.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\report_f06_Alasamo.cs">
+      <DependentUpon>report_f06_Alasamo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_weeksch.cs">
+      <DependentUpon>dialysis_report_weeksch.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_drug_term.cs">
+      <DependentUpon>dialysis_report_drug_term.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\report_HTest.cs">
+      <DependentUpon>report_HTest.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\QualityEvaluationMonth.cs">
+      <DependentUpon>QualityEvaluationMonth.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_j01.cs">
+      <DependentUpon>dialysis_report_j01.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_j01_1.cs">
+      <DependentUpon>dialysis_report_j01_1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="report\dialysis_report_j01_2.cs">
+      <DependentUpon>dialysis_report_j01_2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Restful\IRestServiceImpl.cs" />
+    <Compile Include="Restful\RestServiceImpl.svc.cs">
+      <DependentUpon>RestServiceImpl.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_01.aspx.cs">
+      <DependentUpon>Dialysis_Stock_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_Stock_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock.aspx.cs">
+      <DependentUpon>Dialysis_Stock.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock.aspx.designer.cs">
+      <DependentUpon>Dialysis_Stock.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_05.aspx.cs">
+      <DependentUpon>Dialysis_Stock_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_Stock_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_06.aspx.cs">
+      <DependentUpon>Dialysis_Stock_06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_06.aspx.designer.cs">
+      <DependentUpon>Dialysis_Stock_06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_02.aspx.cs">
+      <DependentUpon>Dialysis_Stock_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_Stock_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_04.aspx.cs">
+      <DependentUpon>Dialysis_Stock_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_Stock_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_03.aspx.cs">
+      <DependentUpon>Dialysis_Stock_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Stock\Dialysis_Stock_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_Stock_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Config.aspx.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\Config.aspx.designer.cs">
+      <DependentUpon>Config.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_05.aspx.cs">
+      <DependentUpon>Dialysis_System_05.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_05.aspx.designer.cs">
+      <DependentUpon>Dialysis_System_05.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_01.aspx.cs">
+      <DependentUpon>Dialysis_System_01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_01.aspx.designer.cs">
+      <DependentUpon>Dialysis_System_01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_04.aspx.cs">
+      <DependentUpon>Dialysis_System_04.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_04.aspx.designer.cs">
+      <DependentUpon>Dialysis_System_04.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_02.aspx.cs">
+      <DependentUpon>Dialysis_System_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_02.aspx.designer.cs">
+      <DependentUpon>Dialysis_System_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_06.aspx.cs">
+      <DependentUpon>Dialysis_System_06.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_06.aspx.designer.cs">
+      <DependentUpon>Dialysis_System_06.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_03.aspx.cs">
+      <DependentUpon>Dialysis_System_03.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_03.aspx.designer.cs">
+      <DependentUpon>Dialysis_System_03.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\drug_mod.aspx.cs">
+      <DependentUpon>drug_mod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\drug_mod.aspx.designer.cs">
+      <DependentUpon>drug_mod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_07.aspx.cs">
+      <DependentUpon>Dialysis_System_07.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_07.aspx.designer.cs">
+      <DependentUpon>Dialysis_System_07.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_08.aspx.cs">
+      <DependentUpon>Dialysis_System_08.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Systems\Dialysis_System_08.aspx.designer.cs">
+      <DependentUpon>Dialysis_System_08.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tools\Common.cs" />
+    <Compile Include="tools\DBMysql.cs" />
+    <Compile Include="tools\Pat.cs" />
+    <Compile Include="ipad_detaillist02_Xian.aspx.cs">
+      <DependentUpon>ipad_detaillist02_Xian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Xian.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist02_Xian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist_Xian.aspx.cs">
+      <DependentUpon>ipad_detaillist_Xian.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist_Xian.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist_Xian.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Henan.aspx.cs">
+      <DependentUpon>ipad_detaillist02_Henan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Henan.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist02_Henan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist_Henan.aspx.cs">
+      <DependentUpon>ipad_detaillist_Henan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist_Henan.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist_Henan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="checkin\SchTable.aspx.cs">
+      <DependentUpon>SchTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="checkin\SchTable.aspx.designer.cs">
+      <DependentUpon>SchTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dialysis_Info.aspx.cs">
+      <DependentUpon>Dialysis_Info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dialysis_Info.aspx.designer.cs">
+      <DependentUpon>Dialysis_Info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_history_Henan.aspx.cs">
+      <DependentUpon>ipad_history_Henan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_history_Henan.aspx.designer.cs">
+      <DependentUpon>ipad_history_Henan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist.aspx.cs">
+      <DependentUpon>ipad_detaillist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist02.aspx.cs">
+      <DependentUpon>ipad_detaillist02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist02.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist_Alasamo.aspx.cs">
+      <DependentUpon>ipad_detaillist_Alasamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist_Alasamo.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist_Alasamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Alasamo.aspx.cs">
+      <DependentUpon>ipad_detaillist02_Alasamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Alasamo.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist02_Alasamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_history_Alasamo.aspx.cs">
+      <DependentUpon>ipad_history_Alasamo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_history_Alasamo.aspx.designer.cs">
+      <DependentUpon>ipad_history_Alasamo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Hebei.aspx.cs">
+      <DependentUpon>ipad_detaillist02_Hebei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist02_Hebei.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist02_Hebei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_EvaForm.aspx.cs">
+      <DependentUpon>ipad_EvaForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_EvaForm.aspx.designer.cs">
+      <DependentUpon>ipad_EvaForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_detaillist_Hebei.aspx.cs">
+      <DependentUpon>ipad_detaillist_Hebei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_detaillist_Hebei.aspx.designer.cs">
+      <DependentUpon>ipad_detaillist_Hebei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_history_Hebei.aspx.cs">
+      <DependentUpon>ipad_history_Hebei.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_history_Hebei.aspx.designer.cs">
+      <DependentUpon>ipad_history_Hebei.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_List.aspx.cs">
+      <DependentUpon>ipad_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_List.aspx.designer.cs">
+      <DependentUpon>ipad_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_history_117.aspx.cs">
+      <DependentUpon>ipad_history_117.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_history_117.aspx.designer.cs">
+      <DependentUpon>ipad_history_117.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginhenan.aspx.cs">
+      <DependentUpon>loginhenan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginhenan.aspx.designer.cs">
+      <DependentUpon>loginhenan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_index.aspx.cs">
+      <DependentUpon>ipad_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_index.aspx.designer.cs">
+      <DependentUpon>ipad_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_login.aspx.cs">
+      <DependentUpon>ipad_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_login.aspx.designer.cs">
+      <DependentUpon>ipad_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ipad_checkin.aspx.cs">
+      <DependentUpon>ipad_checkin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ipad_checkin.aspx.designer.cs">
+      <DependentUpon>ipad_checkin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loginkey.aspx.cs">
+      <DependentUpon>loginkey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loginkey.aspx.designer.cs">
+      <DependentUpon>loginkey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tools\Rockey.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\Logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\MessageFile.en-US.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\MessageFile.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\MessageFile.zh-CN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\MessageFile.zh-TW.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="report\dialysis_report_h08.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_h08.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Patinfos.ashx" />
+    <Content Include="checkin\Drugs.ashx" />
+    <Content Include="PracInfos.ashx" />
+    <Content Include="Doctors.ashx" />
+    <None Include="App_Readme\Ext.NET.Mobile\CHANGELOG.md" />
+    <None Include="App_Readme\Ext.NET.Mobile\LICENSE" />
+    <None Include="App_Readme\Ext.NET.Mobile\README.md" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="report\All report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>All report.cs</LastGenOutput>
+    </None>
+    <None Include="report\Ap report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Ap report.cs</LastGenOutput>
+    </None>
+    <None Include="report\data2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>data2.cs</LastGenOutput>
+    </None>
+    <None Include="report\data22.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>data22.cs</LastGenOutput>
+    </None>
+    <None Include="report\data22HDF.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>data22HDF.cs</LastGenOutput>
+    </None>
+    <None Include="report\data23.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>data23.cs</LastGenOutput>
+    </None>
+    <None Include="report\Dc report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Dc report.cs</LastGenOutput>
+    </None>
+    <None Include="report\data1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>data1.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report2.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report4.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report4B.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report4B.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_age.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_age.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_age2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_age2.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_cnt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_cnt.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_cnt2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_cnt2.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_cntA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_cntA.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_dry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_dry.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_e01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_e01.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_err.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_err.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_err2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_err2.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_err2A.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_err2A.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_h01.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_h01.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_h02.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_h02.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_h03.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_h03.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_h04.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_h04.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_h05.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_h05.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_h06.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_h06.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_h07.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_h07.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_PurificationProcess.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_PurificationProcess.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_PurificationProcessBody.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_PurificationProcessBody.cs</LastGenOutput>
+    </None>
+    <None Include="report\dialysis_report_PurificationProcessSuzhou.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>dialysis_report_PurificationProcessSuzhou.cs</LastGenOutput>
+    </None>
+    <None Include="report\Dp report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Dp report.cs</LastGenOutput>
+    </None>
+    <None Include="report\Quality.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Quality.cs</LastGenOutput>
+    </None>
+    <None Include="report\report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report.cs</LastGenOutput>
+    </None>
+    <None Include="report\report4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>report4.cs</LastGenOutput>
+    </None>
+    <None Include="report\statistics.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>statistics.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="DataSetDialysis.xsc">
+      <DependentUpon>DataSetDialysis.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetDialysis.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetDialysis.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetDialysis.xss">
+      <DependentUpon>DataSetDialysis.xsd</DependentUpon>
+    </None>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3267</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
