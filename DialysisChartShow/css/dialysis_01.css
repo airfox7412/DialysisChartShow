@@ -1,0 +1,238 @@
+﻿
+.x-grid-custom .x-grid-item TD {
+    color: Black;
+    font-size : 14px;
+    font-weight:bold;
+}
+
+.x-grid-custom .x-column-header {
+    /*background : #718CA1 url(css/header_sprite.png) repeat scroll 0 bottom;*/
+    background-color: #5ABCE0;
+    font-size: 16px;
+    border-left-color  : #6085A5;
+    border-right-color : #728BA1;
+}
+
+.x-grid-custom .x-column-header-over {
+    /*background : #ebf3fd url(css/header_sprite_over.png) repeat 0 bottom !important;*/
+}
+
+.x-grid-custom .x-column-header div {
+    font-size  : 16px;
+    color: Black;
+}
+
+.x-grid-custom .company-link {
+    color : #0E3D4F;
+}
+
+.x-grid-custom .x-column-header-trigger {
+    /*background : #718CA1 url(css/grid3-hd-btn.png) no-repeat left center;*/
+    color:Blue;
+}
+
+.x-grid-custom .x-grid-item-alt .x-grid-cell {
+    background-color : #DAE2E8;
+}
+
+.x-grid-custom .x-grid-item-over .x-grid-cell {
+    border-color : #728BA1;
+    /*background   : url(css/row-over.png);*/
+    background-color: Yellow;
+}
+
+.x-grid-custom .x-grid-item-selected .x-grid-cell {
+    /*background   : url(css/row-selected.png) repeat-x scroll 0 0 #7BBBCF;*/
+    background-color:#5ABCE0;
+    border-color : #728BA1;
+    border-style : solid;
+}
+.x-grid-custom .x-grid-editor .x-form-text
+{
+    font-size:14px;
+    font-weight:bold;
+    color:Blue;
+}
+
+.x-grid-custom .x-grid-item-selected TD {
+    color : #fff;
+}
+
+.x-grid-custom .x-toolbar .x-toolbar-text {
+    color : #fff;
+}
+       
+.x-grid-custom-mid .x-grid-item TD {
+    color: Black;
+    font-size : 14px;
+    font-weight:bold;
+}
+
+.x-grid-custom-mid .x-column-header {
+    /*background : #718CA1 url(css/header_sprite.png) repeat scroll 0 bottom;*/
+    background-color: #5ABCE0;
+    font-size: 12px;
+    border-left-color  : #6085A5;
+    border-right-color : #728BA1;
+}
+
+.x-grid-custom-mid .x-column-header-over {
+    /*background : #ebf3fd url(css/header_sprite_over.png) repeat 0 bottom !important;*/
+}
+
+.x-grid-custom-mid .x-column-header div {
+    font-size  : 12px;
+    color: Black;
+}
+
+.x-grid-custom-mid .company-link {
+    color : #0E3D4F;
+}
+
+.x-grid-custom-mid .x-column-header-trigger {
+    /*background : #718CA1 url(css/grid3-hd-btn.png) no-repeat left center;*/
+    color:Blue;
+}
+
+.x-grid-custom-mid .x-grid-item-alt .x-grid-cell {
+    background-color : #DAE2E8;
+}
+
+.x-grid-custom-mid .x-grid-item-over .x-grid-cell {
+    border-color : #728BA1;
+    /*background   : url(css/row-over.png);*/
+    background-color: Yellow;
+}
+
+.x-grid-custom-mid .x-grid-item-selected .x-grid-cell {
+    /*background   : url(css/row-selected.png) repeat-x scroll 0 0 #7BBBCF;*/
+    background-color:#5ABCE0;
+    border-color : #728BA1;
+    border-style : solid;
+}
+.x-grid-custom-mid .x-grid-editor .x-form-text
+{
+    font-size:12px;
+    font-weight:bold;
+    color:Blue;
+}
+
+/*.x-grid-custom-mid .x-grid-item-selected TD,
+.x-grid-custom-mid .x-grid-item-selected TD .company-link {
+    color : #fff;
+}*/
+
+.x-grid-custom-mid .x-toolbar .x-toolbar-text {
+    color : #fff;
+} 
+
+        .Label_copyright1 .x-label-value
+        {
+            color:White;
+        }    
+        .Label_copyright2 .x-label-value
+        {
+            color:Navy;
+        }
+        #Panel_North .x-autocontainer-innerCt
+        {
+            background:#5ABCE0;
+        }
+        .x-autocontainer-innerCt
+        {
+            background-color:#d1dee9;
+        }
+        
+        .logo .x-label-value {
+            vertical-align: middle;
+            color: white;
+            font-size: xx-large;
+            line-height: 40px;
+            padding:0 200px 0 200px;
+        }
+        .logop {
+            vertical-align: middle;
+            line-height: 40px;
+            padding:0 10px 0 10px;
+        }
+        
+        .BtnGroup .x-btn-group-header-default-framed
+        {
+            background-color: #0D58A2;
+        }
+        .BtnGroup .x-title-text
+        {
+            color: White;
+        }        
+        .BtnGroup .x-table-layout
+        {
+            /*background-color:#0D58A2;*/
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+100,207cca+100,7db9e8+100 */
+            background: #1e5799; /* Old browsers */
+            background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 100%, #207cca 100%, #7db9e8 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 100%,#207cca 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 100%,#207cca 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */ 
+        }
+        
+        .ToolBarBtn
+        {
+            background-color:#5ABCE0; 
+            border-width: medium;
+            border-color:#FFFFE0;            
+        }
+        
+        .PanelMenu .x-toolbar-default
+        {
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+100,207cca+100,7db9e8+100 */
+            background: #1e5799; /* Old browsers */
+            background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 100%, #207cca 100%, #7db9e8 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 100%,#207cca 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 100%,#207cca 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */ 
+        }
+        /*
+        .x-btn-icon-left > .x-btn-icon-el-default-toolbar-small, .x-btn-icon-right > .x-btn-icon-el-default-toolbar-small
+        {
+            height:32px;
+            width:32px;
+        }
+        .x-btn-default-toolbar-small
+        {
+            background-color:#2AABD2
+        }
+        */
+        
+        .btnGroup .x-panel-header-default
+        {
+            border-color:White;
+        }
+        
+        .x-btn .x-btn-menu-active.x-btn-default-small, .x-btn.x-btn-pressed.x-btn-default-small
+        {
+            border-color:Gray;
+            background-color:White;
+        }
+        
+        .x-btn-icon-left > .x-btn-icon-el-default-small, .x-btn-icon-right > .x-btn-icon-el-default-small
+        {
+            height:32px;
+            width:32px;
+        }
+        
+.head_label .x-label-value
+{
+    font-size: 20px; 
+    color: White;
+    font-weight:bolder;
+}
+
+.x-autocontainer-innerCt
+{
+    background-color : #157FCC; 
+}
+.x-btn-inner-default-toolbar-small
+{
+    font-size: 14px; 
+    color: White;    
+}

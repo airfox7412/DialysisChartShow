@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Dialysis_Chart_Show.tools;
+using Ext.Net;
+using System.Configuration;
+using System.Data;
+using System.Net;
+using System.IO;
+using System.Text;
+
+namespace Dialysis_Chart_Show.Information {
+
+    public partial class Dialysis_05_04 : BaseForm
+    {
+        public string toDay = DateTime.Now.ToString("yyyy-MM-dd");
+        private string sel_info_date = string.Empty;
+
+        protected new void Page_Load(object sender, EventArgs e)
+        {
+            if (!X.IsAjaxRequest)
+            {
+                info_date.Text = toDay;
+                show_grid();
+            }
+        }
+
+        protected void show_grid()
+        {
+            string SQL = "SELECT * FROM pat_patrol A ";
+            SQL += "LEFT JOIN pat_info B ON A.pif_ic = B.pif_ic ";
+            //SQL += "WHERE A.pif_ic='" + _PAT_IC + "' AND pat_date='" + toDay + "' ";
+            SQL += "WHERE A.pif_ic='" + _PAT_IC + "' ";
+            if (info_date.Text != "")
+                SQL += "AND pat_date='" + _Get_YMD(info_date.Text) + "' ";
+            SQL += "ORDER BY  A.pat_date DESC";
+            DataTable dt = db.Query(SQL);
+            Store istore = GridPanel1.GetStore();
+            istore.DataSource = db.GetDataArray(dt);
+            istore.DataBind();
+        }
+
+        protected void RowSelect(object sender, DirectEventArgs e) 
+        {
+            string json = e.ExtraParams["Values"];
+            Dictionary<string, string>[] selRow = JSON.Deserialize<Dictionary<string, string>[]>(json);
+            Response.Redirect("Dialysis_05_04_Add.aspx?sid=" + selRow[0]["sid"].ToString());
+            //Response.Redirect("Dialysis_05_041.aspx?sid=" + selRow[0]["sid"].ToString());
+        }
+
+        protected void BtnAdd_Click(object sender, DirectEventArgs e)
+        {
+            Response.Redirect("Dialysis_05_04_Add.aspx");
+        }
+
+        protected void BtnDel_Click(object sender, DirectEventArgs e)
+        {
+        }
+
+        protected void BtnPrint_Click(object sender, DirectEventArgs e)
+        {
+            sel_info_date = _Get_YMD(info_date.Text);
+            //sel_info_date = toDay;
+            Response.Redirect("../report/Report_Dialysis_h.aspx?_PAT_ID=" + _PAT_ID + "&_INFO_DATE=" + sel_info_date + "&_REPORT_NAME=100");
+        }
+
+        protected void info_date_Change(object sender, DirectEventArgs e)
+        {
+            show_grid();
+        }
+    }
+}

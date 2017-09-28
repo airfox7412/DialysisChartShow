@@ -1,0 +1,63 @@
+﻿.x-grid-custom-r .x-grid-item TD 
+{
+    color: Black;
+    font-size: 14px;
+    font-weight:bold;
+    background-color: White;
+}
+
+.x-grid-custom-r .x-column-header {
+    background-color: #5ABC50;
+    font-size: 14px;
+}
+
+.x-grid-custom-r .x-column-header-over {
+    background-color: #5ABCE0;
+    font-size: 14px;
+    color:Black;
+}
+
+.x-grid-custom-r .x-column-header div {
+    font-size : 14px;
+    color : White;
+    font-weight:bold;
+}
+
+.x-grid-custom-r .x-column-header-trigger {
+    /*background : #718CA1 url(css/grid3-hd-btn.png) no-repeat left center;*/
+}
+
+.x-grid-custom-r .x-grid-item-alt .x-grid-cell {
+    background-color : #DAE2E8;
+}
+
+.x-grid-custom-r .x-grid-item-over .x-grid-cell {
+    border-color : #0000A1;
+    background-color: Yellow;
+}
+
+.x-grid-custom-r .x-grid-item-selected .x-grid-cell {
+    background-color: #5ABCE0;
+    border-color : #0000A1;
+    border-style : solid;
+}
+
+.x-grid-custom-r .x-grid-item-selected TD {
+    color : Black;
+}
+
+.x-grid-custom-r .x-toolbar .x-toolbar-text {
+    color : Black !important;
+}
+
+.x-grid-custom-r .x-grid-editor .x-form-text
+{
+    font-size: 14px;
+    font-weight: bold;
+    color: Blue;
+}
+
+.x-column-header-trigger
+{
+    background-color: #236bb2;
+}

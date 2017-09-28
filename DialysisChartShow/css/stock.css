@@ -1,0 +1,78 @@
+
+    .x-grid-custom .x-grid-item TD {
+        color: Black;
+        font-size : 14px;
+        font-weight:bold;
+    }
+
+    .x-grid-custom .x-column-header {
+        /*background : #718CA1 url(css/header_sprite.png) repeat scroll 0 bottom;*/
+        background-color: #5ABCE0;
+        font-size: 16px;
+        border-left-color  : #6085A5;
+        border-right-color : #728BA1;
+    }
+
+    .x-grid-custom .x-column-header-over {
+        /*background : #ebf3fd url(css/header_sprite_over.png) repeat 0 bottom !important;*/
+    }
+
+    .x-grid-custom .x-column-header div {
+        font-size  : 16px;
+        color: Black;
+    }
+
+    .x-grid-custom .company-link {
+        color : #0E3D4F;
+    }
+
+    .x-grid-custom .x-column-header-trigger {
+        /*background : #718CA1 url(css/grid3-hd-btn.png) no-repeat left center;*/
+        color:Blue;
+    }
+
+    .x-grid-custom .x-grid-item-alt .x-grid-cell {
+        background-color : #DAE2E8;
+    }
+
+    .x-grid-custom .x-grid-item-over .x-grid-cell {
+        border-color : #728BA1;
+        /*background   : url(css/row-over.png);*/
+        background-color: Yellow;
+    }
+
+    .x-grid-custom .x-grid-item-selected .x-grid-cell {
+        /*background   : url(css/row-selected.png) repeat-x scroll 0 0 #7BBBCF;*/
+        background-color:#5ABCE0;
+        border-color : #728BA1;
+        border-style : solid;
+    }
+    .x-grid-custom .x-grid-editor .x-form-text
+    {
+        font-size:14px;
+        font-weight:bold;
+        color:Blue;
+    }
+
+    /*.x-grid-custom .x-grid-item-selected TD,
+    .x-grid-custom .x-grid-item-selected TD .company-link {
+        color : #fff;
+    }*/
+
+    .x-grid-custom .x-toolbar .x-toolbar-text {
+        color : #fff !important;
+    }
+    .x-toolbar-default
+    {
+        background-color:#5ABCE0;
+    }
+    .label_blue
+    {
+        color:Blue;
+        font-size:18px;
+    }
+    .label_red
+    {
+        color:Red;
+        font-size:18px;
+    }

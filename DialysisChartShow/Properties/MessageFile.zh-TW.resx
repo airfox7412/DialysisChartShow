@@ -1,0 +1,1760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Dialysis_Info.Button0" xml:space="preserve">
+    <value>血透病患總覽</value>
+    <comment>血透病患總覽</comment>
+  </data>
+  <data name="Dialysis_Info.Button1" xml:space="preserve">
+    <value>診斷信息</value>
+    <comment>診斷信息</comment>
+  </data>
+  <data name="Dialysis_Info.Button10" xml:space="preserve">
+    <value>質量分析統計</value>
+    <comment>質量分析統計</comment>
+  </data>
+  <data name="Dialysis_Info.Button11" xml:space="preserve">
+    <value>血透評估表</value>
+    <comment>血透評估表</comment>
+  </data>
+  <data name="Dialysis_Info.Button2" xml:space="preserve">
+    <value>血透信息</value>
+    <comment>血透信息</comment>
+  </data>
+  <data name="Dialysis_Info.Button3" xml:space="preserve">
+    <value>治療信息</value>
+    <comment>治療信息</comment>
+  </data>
+  <data name="Dialysis_Info.Button4" xml:space="preserve">
+    <value>實驗室及輔助檢查</value>
+    <comment>實驗室及輔助檢查</comment>
+  </data>
+  <data name="Dialysis_Info.Button5" xml:space="preserve">
+    <value>病程記錄</value>
+    <comment>病程記錄</comment>
+  </data>
+  <data name="Dialysis_Info.Button6" xml:space="preserve">
+    <value>血液净化首次病歷</value>
+    <comment>血液净化首次病歷</comment>
+  </data>
+  <data name="Dialysis_Info.Button8" xml:space="preserve">
+    <value>基本信息索引</value>
+    <comment>基本信息索引</comment>
+  </data>
+  <data name="Dialysis_Info.Button9" xml:space="preserve">
+    <value>血液净化過程</value>
+    <comment>血液净化過程</comment>
+  </data>
+  <data name="drug_list.Column1" xml:space="preserve">
+    <value>日期</value>
+    <comment>日期</comment>
+  </data>
+  <data name="drug_list.Column10" xml:space="preserve">
+    <value>藥品名稱</value>
+    <comment>藥品名稱</comment>
+  </data>
+  <data name="drug_list.Column11" xml:space="preserve">
+    <value>備註</value>
+    <comment>備註</comment>
+  </data>
+  <data name="drug_list.Column12" xml:space="preserve">
+    <value>記錄人</value>
+    <comment>記錄人</comment>
+  </data>
+  <data name="drug_list.Column13" xml:space="preserve">
+    <value>日期</value>
+    <comment>日期</comment>
+  </data>
+  <data name="drug_list.Column14" xml:space="preserve">
+    <value>記錄時間</value>
+    <comment>記錄時間</comment>
+  </data>
+  <data name="drug_list.Column15" xml:space="preserve">
+    <value>經治醫生</value>
+    <comment>經治醫生</comment>
+  </data>
+  <data name="drug_list.Column16" xml:space="preserve">
+    <value>藥品名稱</value>
+    <comment>藥品名稱</comment>
+  </data>
+  <data name="drug_list.Column17" xml:space="preserve">
+    <value>劑量</value>
+    <comment>劑量</comment>
+  </data>
+  <data name="drug_list.Column18" xml:space="preserve">
+    <value>頻率</value>
+    <comment>頻率</comment>
+  </data>
+  <data name="drug_list.Column19" xml:space="preserve">
+    <value>給藥方式</value>
+    <comment>給藥方式</comment>
+  </data>
+  <data name="drug_list.Column2" xml:space="preserve">
+    <value>記錄時間</value>
+    <comment>記錄時間</comment>
+  </data>
+  <data name="drug_list.Column20" xml:space="preserve">
+    <value>是否停用</value>
+    <comment>是否停用</comment>
+  </data>
+  <data name="drug_list.Column21" xml:space="preserve">
+    <value>停用時間</value>
+    <comment>停用時間</comment>
+  </data>
+  <data name="drug_list.Column22" xml:space="preserve">
+    <value>記錄人</value>
+    <comment>記錄人</comment>
+  </data>
+  <data name="drug_list.Column23" xml:space="preserve">
+    <value>備註</value>
+    <comment>備註</comment>
+  </data>
+  <data name="drug_list.Column3" xml:space="preserve">
+    <value>給藥方式</value>
+    <comment>給藥方式</comment>
+  </data>
+  <data name="drug_list.Column5" xml:space="preserve">
+    <value>劑量</value>
+    <comment>劑量</comment>
+  </data>
+  <data name="drug_list.Column6" xml:space="preserve">
+    <value>經治醫生</value>
+    <comment>經治醫生</comment>
+  </data>
+  <data name="drug_list.Column7" xml:space="preserve">
+    <value>頻率</value>
+    <comment>頻率</comment>
+  </data>
+  <data name="drug_list.Column8" xml:space="preserve">
+    <value>是否停用</value>
+    <comment>是否停用</comment>
+  </data>
+  <data name="drug_list.Column9" xml:space="preserve">
+    <value>停用時間</value>
+    <comment>停用時間</comment>
+  </data>
+  <data name="drug_list.Grid_Long_Term" xml:space="preserve">
+    <value>長期醫囑用藥</value>
+    <comment>長期醫囑用藥</comment>
+  </data>
+  <data name="drug_list.Grid_Short_Term" xml:space="preserve">
+    <value>臨時醫囑用藥</value>
+    <comment>臨時醫囑用藥</comment>
+  </data>
+  <data name="Info_index.Cbo_Hospital" xml:space="preserve">
+    <value>醫院列表 :</value>
+    <comment>醫院列表</comment>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>病患姓名</value>
+    <comment>姓名</comment>
+  </data>
+  <data name="ContactPhone" xml:space="preserve">
+    <value>聯絡電話</value>
+    <comment>聯絡電話</comment>
+  </data>
+  <data name="LastChangeDate" xml:space="preserve">
+    <value>最後更新日期</value>
+    <comment>最後更新日期</comment>
+  </data>
+  <data name="Sex" xml:space="preserve">
+    <value>性別</value>
+    <comment>性別</comment>
+  </data>
+  <data name="Age" xml:space="preserve">
+    <value>年齡</value>
+    <comment>年齡</comment>
+  </data>
+  <data name="SocialId" xml:space="preserve">
+    <value>身分證號</value>
+    <comment>身分證號</comment>
+  </data>
+  <data name="Info_index.Column5" xml:space="preserve">
+    <value>主治醫師</value>
+    <comment>主治醫師</comment>
+  </data>
+  <data name="Info_index.Column6" xml:space="preserve">
+    <value>調查日期</value>
+    <comment>調查日期</comment>
+  </data>
+  <data name="Info_index.Column7" xml:space="preserve">
+    <value>序號</value>
+    <comment>序號</comment>
+  </data>
+  <data name="Info_index.Column8" xml:space="preserve">
+    <value>病歷號</value>
+    <comment>病歷號</comment>
+  </data>
+  <data name="Info_index.Column9" xml:space="preserve">
+    <value>建檔日期</value>
+    <comment>建檔日期</comment>
+  </data>
+  <data name="Info_index.CommandColumn1" xml:space="preserve">
+    <value>透析資料</value>
+    <comment>透析資料</comment>
+  </data>
+  <data name="Info_index.CommandColumn4" xml:space="preserve">
+    <value>單筆上傳</value>
+    <comment>單筆上傳</comment>
+  </data>
+  <data name="Info_index.UploadAdminAll" xml:space="preserve">
+    <value>行政資料上傳</value>
+    <comment>行政資料上傳</comment>
+  </data>
+  <data name="Info_index.UploadClinicalAll" xml:space="preserve">
+    <value>臨床資料上傳</value>
+    <comment>臨床資料上傳</comment>
+  </data>
+  <data name="Info_index.UploadMedicationAll" xml:space="preserve">
+    <value>用藥資料上傳</value>
+    <comment>用藥資料上傳</comment>
+  </data>
+  <data name="Dialysis_04.btnADD" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Dialysis_04.btnCALC" xml:space="preserve">
+    <value>計算</value>
+  </data>
+  <data name="Dialysis_04.btnCANCEL" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Dialysis_04.btnLAST" xml:space="preserve">
+    <value>最近</value>
+  </data>
+  <data name="Dialysis_04.btnREAD" xml:space="preserve">
+    <value>讀取</value>
+  </data>
+  <data name="Dialysis_04.btnSAVE" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_04.cboRITEM_CODE" xml:space="preserve">
+    <value>檢查項目</value>
+  </data>
+  <data name="Dialysis_04.ChartEdit" xml:space="preserve">
+    <value>修改歷程</value>
+  </data>
+  <data name="Dialysis_04.ChartLine" xml:space="preserve">
+    <value>歷次檢查</value>
+  </data>
+  <data name="Dialysis_04.colPAT_NO" xml:space="preserve">
+    <value>病歷號</value>
+  </data>
+  <data name="Dialysis_04.colRESULT_CODE" xml:space="preserve">
+    <value>檢驗代碼</value>
+  </data>
+  <data name="Dialysis_04.colRESULT_DATE" xml:space="preserve">
+    <value>檢驗日期</value>
+  </data>
+  <data name="Dialysis_04.colRESULT_DAYS" xml:space="preserve">
+    <value>經過時間</value>
+  </data>
+  <data name="Dialysis_04.colRESULT_VALUE_N" xml:space="preserve">
+    <value>新檢驗結果1</value>
+  </data>
+  <data name="Dialysis_04.colRESULT_VALUE_O" xml:space="preserve">
+    <value>實際檢驗結果</value>
+  </data>
+  <data name="Dialysis_04.colRITEM_CLASS" xml:space="preserve">
+    <value>大分類</value>
+  </data>
+  <data name="Dialysis_04.colRITEM_HIGH1" xml:space="preserve">
+    <value>檢驗高值</value>
+  </data>
+  <data name="Dialysis_04.colRITEM_LOW1" xml:space="preserve">
+    <value>檢驗低值</value>
+  </data>
+  <data name="Dialysis_04.colRITEM_NAME" xml:space="preserve">
+    <value>檢驗簡稱</value>
+  </data>
+  <data name="Dialysis_04.colRITEM_NAME_S" xml:space="preserve">
+    <value>檢驗名稱</value>
+  </data>
+  <data name="Dialysis_04.colRITEM_TYPE" xml:space="preserve">
+    <value>小分類</value>
+  </data>
+  <data name="Dialysis_04.colRITEM_UNIT" xml:space="preserve">
+    <value>檢驗單位</value>
+  </data>
+  <data name="Dialysis_04.Column10" xml:space="preserve">
+    <value>檢驗單位</value>
+  </data>
+  <data name="Dialysis_04.Column11" xml:space="preserve">
+    <value>檢驗低值</value>
+  </data>
+  <data name="Dialysis_04.Column12" xml:space="preserve">
+    <value>檢驗高值</value>
+  </data>
+  <data name="Dialysis_04.Column13" xml:space="preserve">
+    <value>經過時間</value>
+  </data>
+  <data name="Dialysis_04.Column14" xml:space="preserve">
+    <value>登打時間</value>
+  </data>
+  <data name="Dialysis_04.Column15" xml:space="preserve">
+    <value>登打人</value>
+  </data>
+  <data name="Dialysis_04.Column2" xml:space="preserve">
+    <value>病歷號</value>
+  </data>
+  <data name="Dialysis_04.Column3" xml:space="preserve">
+    <value>檢驗日期</value>
+  </data>
+  <data name="Dialysis_04.Column4" xml:space="preserve">
+    <value>檢驗代碼</value>
+  </data>
+  <data name="Dialysis_04.Column5" xml:space="preserve">
+    <value>大分類</value>
+  </data>
+  <data name="Dialysis_04.Column6" xml:space="preserve">
+    <value>小分類</value>
+  </data>
+  <data name="Dialysis_04.Column7" xml:space="preserve">
+    <value>檢驗簡稱</value>
+  </data>
+  <data name="Dialysis_04.Column8" xml:space="preserve">
+    <value>檢驗名稱</value>
+  </data>
+  <data name="Dialysis_04.Column9" xml:space="preserve">
+    <value>檢驗结果</value>
+  </data>
+  <data name="Dialysis_04.GridPanel1" xml:space="preserve">
+    <value>檢驗结果</value>
+  </data>
+  <data name="Dialysis_04.GridPanel2" xml:space="preserve">
+    <value>檢驗结果歷史資料</value>
+  </data>
+  <data name="Dialysis_04.MenuItem48" xml:space="preserve">
+    <value>實驗室檢查</value>
+  </data>
+  <data name="Dialysis_04.MenuItem51" xml:space="preserve">
+    <value>輔助檢查</value>
+  </data>
+  <data name="Dialysis_04.PanelT" xml:space="preserve">
+    <value>實驗室檢查</value>
+  </data>
+  <data name="Dialysis_04.txtGROUP_NAME" xml:space="preserve">
+    <value>群组</value>
+  </data>
+  <data name="Dialysis_04.txtRESULT_DATE" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_02.MenuItem1" xml:space="preserve">
+    <value>抗凝劑</value>
+  </data>
+  <data name="Dialysis_02.MenuItem2" xml:space="preserve">
+    <value>幹體重</value>
+  </data>
+  <data name="Dialysis_02.MenuItem3" xml:space="preserve">
+    <value>合用其他透析模式</value>
+  </data>
+  <data name="Dialysis_02.MenuItem4" xml:space="preserve">
+    <value>血壓測量</value>
+  </data>
+  <data name="Dialysis_02.MenuItem48" xml:space="preserve">
+    <value>血管通路</value>
+  </data>
+  <data name="Dialysis_02.MenuItem51" xml:space="preserve">
+    <value>透析處方</value>
+  </data>
+  <data name="Dialysis_02.MenuItem56" xml:space="preserve">
+    <value>透析充分性</value>
+  </data>
+  <data name="Dialysis_02_041.btnADD" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Dialysis_02_041.btnCALC" xml:space="preserve">
+    <value>計算</value>
+  </data>
+  <data name="Dialysis_02_041.btnCANCEL" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Dialysis_02_041.btnLAST" xml:space="preserve">
+    <value>最近</value>
+  </data>
+  <data name="Dialysis_02_041.btnREAD" xml:space="preserve">
+    <value>讀取</value>
+  </data>
+  <data name="Dialysis_02_041.btnSAVE" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_02_041.cboRITEM_CODE" xml:space="preserve">
+    <value>檢查項目</value>
+  </data>
+  <data name="Dialysis_02_041.ChartEdit" xml:space="preserve">
+    <value>修改歷程</value>
+  </data>
+  <data name="Dialysis_02_041.ChartLine" xml:space="preserve">
+    <value>歷次檢查</value>
+  </data>
+  <data name="Dialysis_02_041.colRESULT_CODE" xml:space="preserve">
+    <value>檢查代碼</value>
+  </data>
+  <data name="Dialysis_02_041.colRESULT_DATE" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_02_041.colRESULT_DAYS" xml:space="preserve">
+    <value>經過時間</value>
+  </data>
+  <data name="Dialysis_02_041.colRESULT_VALUE_N" xml:space="preserve">
+    <value>新檢查結果</value>
+  </data>
+  <data name="Dialysis_02_041.colRESULT_VALUE_O" xml:space="preserve">
+    <value>實際檢測結果</value>
+  </data>
+  <data name="Dialysis_02_041.colRITEM_CLASS" xml:space="preserve">
+    <value>大分類</value>
+  </data>
+  <data name="Dialysis_02_041.colRITEM_HIGH1" xml:space="preserve">
+    <value>檢查高值</value>
+  </data>
+  <data name="Dialysis_02_041.colRITEM_LOW1" xml:space="preserve">
+    <value>檢查低值</value>
+  </data>
+  <data name="Dialysis_02_041.colRITEM_NAME" xml:space="preserve">
+    <value>檢查簡稱</value>
+  </data>
+  <data name="Dialysis_02_041.colRITEM_NAME_S" xml:space="preserve">
+    <value>檢查名稱</value>
+  </data>
+  <data name="Dialysis_02_041.colRITEM_TYPE" xml:space="preserve">
+    <value>小分類</value>
+  </data>
+  <data name="Dialysis_02_041.colRITEM_UNIT" xml:space="preserve">
+    <value>檢查單位</value>
+  </data>
+  <data name="Dialysis_02_041.Column10" xml:space="preserve">
+    <value>檢查單位</value>
+  </data>
+  <data name="Dialysis_02_041.Column11" xml:space="preserve">
+    <value>檢查低值</value>
+  </data>
+  <data name="Dialysis_02_041.Column12" xml:space="preserve">
+    <value>檢查高值</value>
+  </data>
+  <data name="Dialysis_02_041.Column13" xml:space="preserve">
+    <value>經過時間</value>
+  </data>
+  <data name="Dialysis_02_041.Column14" xml:space="preserve">
+    <value>登打時間</value>
+  </data>
+  <data name="Dialysis_02_041.Column15" xml:space="preserve">
+    <value>登打人</value>
+  </data>
+  <data name="Dialysis_02_041.Column3" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_02_041.Column4" xml:space="preserve">
+    <value>檢查代碼</value>
+  </data>
+  <data name="Dialysis_02_041.Column5" xml:space="preserve">
+    <value>大分類</value>
+  </data>
+  <data name="Dialysis_02_041.Column6" xml:space="preserve">
+    <value>小分類</value>
+  </data>
+  <data name="Dialysis_02_041.Column7" xml:space="preserve">
+    <value>檢查簡稱</value>
+  </data>
+  <data name="Dialysis_02_041.Column8" xml:space="preserve">
+    <value>檢查名稱</value>
+  </data>
+  <data name="Dialysis_02_041.Column9" xml:space="preserve">
+    <value>檢查結果</value>
+  </data>
+  <data name="Dialysis_02_041.GridPanel1" xml:space="preserve">
+    <value>檢查結果</value>
+  </data>
+  <data name="Dialysis_02_041.txtGROUP_NAME" xml:space="preserve">
+    <value>群組</value>
+  </data>
+  <data name="Dialysis_02_041.txtRESULT_DATE" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_02_031.btnADD" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Dialysis_02_031.btnCALC" xml:space="preserve">
+    <value>計算</value>
+  </data>
+  <data name="Dialysis_02_031.btnCANCEL" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Dialysis_02_031.btnLAST" xml:space="preserve">
+    <value>最近</value>
+  </data>
+  <data name="Dialysis_02_031.btnREAD" xml:space="preserve">
+    <value>讀取</value>
+  </data>
+  <data name="Dialysis_02_031.btnSAVE" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_02_031.cboRITEM_CODE" xml:space="preserve">
+    <value>檢查項目</value>
+  </data>
+  <data name="Dialysis_02_031.ChartEdit" xml:space="preserve">
+    <value>修改歷程</value>
+  </data>
+  <data name="Dialysis_02_031.ChartLine" xml:space="preserve">
+    <value>歷次檢查</value>
+  </data>
+  <data name="Dialysis_02_031.colRESULT_CODE" xml:space="preserve">
+    <value>檢查代碼</value>
+  </data>
+  <data name="Dialysis_02_031.colRESULT_DATE" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_02_031.colRESULT_DAYS" xml:space="preserve">
+    <value>經過時間</value>
+  </data>
+  <data name="Dialysis_02_031.colRESULT_VALUE_N" xml:space="preserve">
+    <value>新檢查結果</value>
+  </data>
+  <data name="Dialysis_02_031.colRESULT_VALUE_O" xml:space="preserve">
+    <value>實際檢測結果</value>
+  </data>
+  <data name="Dialysis_02_031.colRITEM_CLASS" xml:space="preserve">
+    <value>大分類</value>
+  </data>
+  <data name="Dialysis_02_031.colRITEM_HIGH1" xml:space="preserve">
+    <value>檢查高值</value>
+  </data>
+  <data name="Dialysis_02_031.colRITEM_LOW1" xml:space="preserve">
+    <value>檢查低值</value>
+  </data>
+  <data name="Dialysis_02_031.colRITEM_NAME" xml:space="preserve">
+    <value>檢查簡稱</value>
+  </data>
+  <data name="Dialysis_02_031.colRITEM_NAME_S" xml:space="preserve">
+    <value>檢查名稱</value>
+  </data>
+  <data name="Dialysis_02_031.colRITEM_TYPE" xml:space="preserve">
+    <value>小分類</value>
+  </data>
+  <data name="Dialysis_02_031.colRITEM_UNIT" xml:space="preserve">
+    <value>檢查單位</value>
+  </data>
+  <data name="Dialysis_02_031.Column10" xml:space="preserve">
+    <value>檢查單位</value>
+  </data>
+  <data name="Dialysis_02_031.Column11" xml:space="preserve">
+    <value>檢查低值</value>
+  </data>
+  <data name="Dialysis_02_031.Column12" xml:space="preserve">
+    <value>檢查高值</value>
+  </data>
+  <data name="Dialysis_02_031.Column13" xml:space="preserve">
+    <value>經過時間</value>
+  </data>
+  <data name="Dialysis_02_031.Column14" xml:space="preserve">
+    <value>登打時間</value>
+  </data>
+  <data name="Dialysis_02_031.Column15" xml:space="preserve">
+    <value>登打人</value>
+  </data>
+  <data name="Dialysis_02_031.Column2" xml:space="preserve">
+    <value>病歷號</value>
+  </data>
+  <data name="Dialysis_02_031.Column3" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_02_031.Column4" xml:space="preserve">
+    <value>檢查代碼</value>
+  </data>
+  <data name="Dialysis_02_031.Column5" xml:space="preserve">
+    <value>大分類</value>
+  </data>
+  <data name="Dialysis_02_031.Column6" xml:space="preserve">
+    <value>小分類</value>
+  </data>
+  <data name="Dialysis_02_031.Column7" xml:space="preserve">
+    <value>檢查簡稱</value>
+  </data>
+  <data name="Dialysis_02_031.Column8" xml:space="preserve">
+    <value>檢查名稱</value>
+  </data>
+  <data name="Dialysis_02_031.Column9" xml:space="preserve">
+    <value>檢查結果</value>
+  </data>
+  <data name="Dialysis_02_031.GridPanel1" xml:space="preserve">
+    <value>血壓測量</value>
+  </data>
+  <data name="Dialysis_02_031.txtGROUP_NAME.FieldLabel" xml:space="preserve">
+    <value>群組</value>
+  </data>
+  <data name="Dialysis_02_031.txtRESULT_DATE" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_02_031.txtGROUP_NAME.Text" xml:space="preserve">
+    <value>血壓測量</value>
+  </data>
+  <data name="Dialysis_01_01.btn_1" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_01.Button1" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Dialysis_01_01.Button2" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_01.Button3" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_01.Button4" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_01.Button5" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_01.Button6" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_01_01.Button7" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_01.Button8" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_01.FieldSet1" xml:space="preserve">
+    <value>原發病診斷分類</value>
+  </data>
+  <data name="Dialysis_01_01.FieldSet2" xml:space="preserve">
+    <value>原發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_01.FieldSet3" xml:space="preserve">
+    <value>繼發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_01.FieldSet4" xml:space="preserve">
+    <value>遺傳性及先天性腎病</value>
+  </data>
+  <data name="Dialysis_01_01.FieldSet5" xml:space="preserve">
+    <value>腎小管間質疾病</value>
+  </data>
+  <data name="Dialysis_01_01.FieldSet6" xml:space="preserve">
+    <value>泌尿系感染和结石</value>
+  </data>
+  <data name="Dialysis_01_01.FieldSet7" xml:space="preserve">
+    <value>腎臟切除原因</value>
+  </data>
+  <data name="Dialysis_01_01.FormPanel1" xml:space="preserve">
+    <value>原發病診斷</value>
+  </data>
+  <data name="Dialysis_01_01.info_date" xml:space="preserve">
+    <value>診斷日期</value>
+  </data>
+  <data name="Dialysis_01_01.opt_10_1" xml:space="preserve">
+    <value>慢性腎盂腎炎</value>
+  </data>
+  <data name="Dialysis_01_01.opt_10_2" xml:space="preserve">
+    <value>泌尿系結核</value>
+  </data>
+  <data name="Dialysis_01_01.opt_10_3" xml:space="preserve">
+    <value>腎結石</value>
+  </data>
+  <data name="Dialysis_01_01.opt_10_4" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_01.opt_12_1" xml:space="preserve">
+    <value>腎臟腫瘤</value>
+  </data>
+  <data name="Dialysis_01_01.opt_12_2" xml:space="preserve">
+    <value>腎結核</value>
+  </data>
+  <data name="Dialysis_01_01.opt_12_3" xml:space="preserve">
+    <value>腎臟囊腫</value>
+  </data>
+  <data name="Dialysis_01_01.opt_12_4" xml:space="preserve">
+    <value>腎發育不良</value>
+  </data>
+  <data name="Dialysis_01_01.opt_12_5" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_1" xml:space="preserve">
+    <value>原發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_10" xml:space="preserve">
+    <value>不詳</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_2" xml:space="preserve">
+    <value>繼發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_3" xml:space="preserve">
+    <value>遺傳性及先天性腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_4" xml:space="preserve">
+    <value>腎小管間質疾病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_5" xml:space="preserve">
+    <value>泌尿系腫瘤</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_6" xml:space="preserve">
+    <value>泌尿系感染和结石</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_7" xml:space="preserve">
+    <value>腎臟切除術後</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_8" xml:space="preserve">
+    <value>急性腎衰</value>
+  </data>
+  <data name="Dialysis_01_01.opt_1_9" xml:space="preserve">
+    <value>移植腎失功</value>
+  </data>
+  <data name="Dialysis_01_01.opt_2_1" xml:space="preserve">
+    <value>急性腎炎綜合徵</value>
+  </data>
+  <data name="Dialysis_01_01.opt_2_2" xml:space="preserve">
+    <value>急進性腎炎綜合徵</value>
+  </data>
+  <data name="Dialysis_01_01.opt_2_3" xml:space="preserve">
+    <value>慢性腎炎綜合徵</value>
+  </data>
+  <data name="Dialysis_01_01.opt_2_4" xml:space="preserve">
+    <value>腎病綜合徵</value>
+  </data>
+  <data name="Dialysis_01_01.opt_2_5" xml:space="preserve">
+    <value>血尿</value>
+  </data>
+  <data name="Dialysis_01_01.opt_2_6" xml:space="preserve">
+    <value>孤立性蛋白尿</value>
+  </data>
+  <data name="Dialysis_01_01.opt_2_7" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_1" xml:space="preserve">
+    <value>高血壓腎損害</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_10" xml:space="preserve">
+    <value>乾燥綜合徵腎損害</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_11" xml:space="preserve">
+    <value>硬皮病腎損害</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_12" xml:space="preserve">
+    <value>類風濕性關節炎和強直性脊柱炎腎損害</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_13" xml:space="preserve">
+    <value>銀屑病腎損害</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_14" xml:space="preserve">
+    <value>乙型肝炎病毒相關性腎炎</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_15" xml:space="preserve">
+    <value>丙型肝炎病毒相關性腎炎</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_16" xml:space="preserve">
+    <value>HIV相關性腎損害</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_17" xml:space="preserve">
+    <value>流行性出血熱腎損害</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_18" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_2" xml:space="preserve">
+    <value>糖尿病腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_3" xml:space="preserve">
+    <value>肥胖相關性腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_4" xml:space="preserve">
+    <value>澱粉樣變性</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_5" xml:space="preserve">
+    <value>多發骨髓瘤腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_6" xml:space="preserve">
+    <value>狼瘡性腎炎</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_7" xml:space="preserve">
+    <value>系統性血管炎腎臟損害</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_8" xml:space="preserve">
+    <value>過敏紫癜性腎炎</value>
+  </data>
+  <data name="Dialysis_01_01.opt_4_9" xml:space="preserve">
+    <value>血栓性微血管病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_6_1" xml:space="preserve">
+    <value>多囊腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_6_2" xml:space="preserve">
+    <value>Alport綜合徵</value>
+  </data>
+  <data name="Dialysis_01_01.opt_6_3" xml:space="preserve">
+    <value>薄基底膜腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_6_4" xml:space="preserve">
+    <value>近端腎小管損害及Fanconi綜合徵</value>
+  </data>
+  <data name="Dialysis_01_01.opt_6_5" xml:space="preserve">
+    <value>Bartter綜合徵</value>
+  </data>
+  <data name="Dialysis_01_01.opt_6_6" xml:space="preserve">
+    <value>Fabry病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_6_7" xml:space="preserve">
+    <value>脂蛋白腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_6_8" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_1" xml:space="preserve">
+    <value>急性腎小管間質性腎炎</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_10" xml:space="preserve">
+    <value>放射性腎病及抗腫瘤藥物所致的腎損害</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_11" xml:space="preserve">
+    <value>痛風性腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_12" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_2" xml:space="preserve">
+    <value>慢性腎小管間質性腎炎</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_3" xml:space="preserve">
+    <value>急性腎小管壞死</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_4" xml:space="preserve">
+    <value>腎小管性酸中毒</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_5" xml:space="preserve">
+    <value>反流性腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_6" xml:space="preserve">
+    <value>梗阻性腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_7" xml:space="preserve">
+    <value>馬兜鈴酸腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_8" xml:space="preserve">
+    <value>造影劑腎病</value>
+  </data>
+  <data name="Dialysis_01_01.opt_8_9" xml:space="preserve">
+    <value>重金屬中毒性腎臟損害</value>
+  </data>
+  <data name="Dialysis_01_01.txt_11" xml:space="preserve">
+    <value>其它泌尿系感染和结石</value>
+  </data>
+  <data name="Dialysis_01_01.txt_13" xml:space="preserve">
+    <value>其他腎臟切除原因</value>
+  </data>
+  <data name="Dialysis_01_01.txt_3" xml:space="preserve">
+    <value>其它原發性腎小球腎病</value>
+  </data>
+  <data name="Dialysis_01_01.txt_5" xml:space="preserve">
+    <value>其它繼發性腎小球腎病說明</value>
+  </data>
+  <data name="Dialysis_01_01.txt_7" xml:space="preserve">
+    <value>其它遺傳性及先天性腎病</value>
+  </data>
+  <data name="Dialysis_01_01.txt_9" xml:space="preserve">
+    <value>其他腎小管間質疾病</value>
+  </data>
+  <data name="Dialysis_01.MenuItem1" xml:space="preserve">
+    <value>腫瘤診斷</value>
+  </data>
+  <data name="Dialysis_01.MenuItem2" xml:space="preserve">
+    <value>過敏診斷</value>
+  </data>
+  <data name="Dialysis_01.MenuItem3" xml:space="preserve">
+    <value>轉歸情況</value>
+  </data>
+  <data name="Dialysis_01.MenuItem4" xml:space="preserve">
+    <value>並發症診斷</value>
+  </data>
+  <data name="Dialysis_01.MenuItem48" xml:space="preserve">
+    <value>原發病診斷</value>
+  </data>
+  <data name="Dialysis_01.MenuItem51" xml:space="preserve">
+    <value>病理診斷</value>
+  </data>
+  <data name="Dialysis_01.MenuItem56" xml:space="preserve">
+    <value>傳染病診斷</value>
+  </data>
+  <data name="Dialysis_01.MenuItem6" xml:space="preserve">
+    <value>新診斷信息</value>
+  </data>
+  <data name="Dialysis_01_02.FormPanel1" xml:space="preserve">
+    <value>病理診斷</value>
+  </data>
+  <data name="Dialysis_01_02.info_date" xml:space="preserve">
+    <value>診斷日期</value>
+  </data>
+  <data name="Dialysis_01_02.FieldSet1" xml:space="preserve">
+    <value>病理診斷分類</value>
+  </data>
+  <data name="Dialysis_01_02.chk_1_1" xml:space="preserve">
+    <value>未行腎活檢檢查</value>
+  </data>
+  <data name="Dialysis_01_02.chk_1_2" xml:space="preserve">
+    <value>原發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_1_3" xml:space="preserve">
+    <value>繼發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_1_4" xml:space="preserve">
+    <value>遺傳性及先天性腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_1_5" xml:space="preserve">
+    <value>腎小管間質疾病</value>
+  </data>
+  <data name="Dialysis_01_02.FieldSet2" xml:space="preserve">
+    <value>原發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_1" xml:space="preserve">
+    <value>腎小球輕微病變</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_2" xml:space="preserve">
+    <value>微小病變性腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_3" xml:space="preserve">
+    <value>局灶節段性腎小球損害</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_4" xml:space="preserve">
+    <value>膜性腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_5" xml:space="preserve">
+    <value>繫膜增殖性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_6" xml:space="preserve">
+    <value>IgA腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_7" xml:space="preserve">
+    <value>毛細血管內增殖性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_8" xml:space="preserve">
+    <value>膜增殖性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_9" xml:space="preserve">
+    <value>新月體腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_10" xml:space="preserve">
+    <value>硬化性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_2_11" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_02.txt_3" xml:space="preserve">
+    <value>其它原發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_02.FieldSet3" xml:space="preserve">
+    <value>繼發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_1" xml:space="preserve">
+    <value>高血壓腎損害</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_2" xml:space="preserve">
+    <value>糖尿病腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_3" xml:space="preserve">
+    <value>肥胖相關性腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_4" xml:space="preserve">
+    <value>澱粉樣變性</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_5" xml:space="preserve">
+    <value>多發骨髓瘤腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_6" xml:space="preserve">
+    <value>狼瘡性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_7" xml:space="preserve">
+    <value>系統性血管炎腎臟損害</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_8" xml:space="preserve">
+    <value>過敏紫癜性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_9" xml:space="preserve">
+    <value>抗基底膜腎炎(Goodpasture綜合徵)</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_10" xml:space="preserve">
+    <value>血栓性微血管病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_11" xml:space="preserve">
+    <value>乾燥綜合徵腎損害</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_12" xml:space="preserve">
+    <value>硬皮病腎損害</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_13" xml:space="preserve">
+    <value>類風濕性關節炎和強直性脊柱炎腎損害</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_14" xml:space="preserve">
+    <value>銀屑病腎損害</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_15" xml:space="preserve">
+    <value>乙型肝炎病毒相關性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_16" xml:space="preserve">
+    <value>丙型肝炎病毒相關性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_17" xml:space="preserve">
+    <value>HIV相關性腎損害</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_18" xml:space="preserve">
+    <value>流行性出血熱腎損害</value>
+  </data>
+  <data name="Dialysis_01_02.chk_4_19" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_02.txt_5" xml:space="preserve">
+    <value>其它繼發性腎小球疾病</value>
+  </data>
+  <data name="Dialysis_01_02.FieldSet4" xml:space="preserve">
+    <value>遺傳性及先天性腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_6_1" xml:space="preserve">
+    <value>Alport綜合徵</value>
+  </data>
+  <data name="Dialysis_01_02.chk_6_2" xml:space="preserve">
+    <value>薄基底膜腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_6_3" xml:space="preserve">
+    <value>近端腎小管損害及Fanconi綜合徵</value>
+  </data>
+  <data name="Dialysis_01_02.chk_6_4" xml:space="preserve">
+    <value>Bartter綜合徵</value>
+  </data>
+  <data name="Dialysis_01_02.chk_6_5" xml:space="preserve">
+    <value>Fabry病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_6_6" xml:space="preserve">
+    <value>脂蛋白腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_6_7" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_02.txt_7" xml:space="preserve">
+    <value>其它遺傳性及先天性腎病</value>
+  </data>
+  <data name="Dialysis_01_02.FieldSet5" xml:space="preserve">
+    <value>腎小管間質疾病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_8_1" xml:space="preserve">
+    <value>急性腎小管間質性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_8_2" xml:space="preserve">
+    <value>慢性腎小管間質性腎炎</value>
+  </data>
+  <data name="Dialysis_01_02.chk_8_3" xml:space="preserve">
+    <value>急性腎小管壞死</value>
+  </data>
+  <data name="Dialysis_01_02.chk_8_4" xml:space="preserve">
+    <value>馬兜鈴酸腎病</value>
+  </data>
+  <data name="Dialysis_01_02.chk_8_5" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_02.txt_9" xml:space="preserve">
+    <value>其它腎小管間質疾病</value>
+  </data>
+  <data name="Dialysis_01_02.Button6" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_01_02.Button1" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Dialysis_01_03.FormPanel1" xml:space="preserve">
+    <value>併發症</value>
+  </data>
+  <data name="Dialysis_01_03.info_date" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_01_03.FieldSet1" xml:space="preserve">
+    <value>併發症分類</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_1" xml:space="preserve">
+    <value>無</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_2" xml:space="preserve">
+    <value>腎性貧血</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_3" xml:space="preserve">
+    <value>骨礦物質代謝紊亂</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_4" xml:space="preserve">
+    <value>高血壓</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_5" xml:space="preserve">
+    <value>低血壓</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_6" xml:space="preserve">
+    <value>澱粉樣變性</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_7" xml:space="preserve">
+    <value>呼吸系統</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_8" xml:space="preserve">
+    <value>心血管系統</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_9" xml:space="preserve">
+    <value>神經系統</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_10" xml:space="preserve">
+    <value>消化系統</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_11" xml:space="preserve">
+    <value>皮膚瘙癢</value>
+  </data>
+  <data name="Dialysis_01_03.chk_1_12" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_03.FieldSet2" xml:space="preserve">
+    <value>骨礦物質代謝紊亂</value>
+  </data>
+  <data name="Dialysis_01_03.chk_2_1" xml:space="preserve">
+    <value>高轉運骨病（需骨活檢支持）</value>
+  </data>
+  <data name="Dialysis_01_03.chk_2_2" xml:space="preserve">
+    <value>低轉運骨病（需骨活檢支持）</value>
+  </data>
+  <data name="Dialysis_01_03.chk_2_3" xml:space="preserve">
+    <value>混合型骨病（需骨活檢支持）</value>
+  </data>
+  <data name="Dialysis_01_03.chk_2_4" xml:space="preserve">
+    <value>轉移性鈣化</value>
+  </data>
+  <data name="Dialysis_01_03.chk_2_5" xml:space="preserve">
+    <value>骨質疏鬆</value>
+  </data>
+  <data name="Dialysis_01_03.chk_2_6" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_03.txt_3" xml:space="preserve">
+    <value>其它骨礦物質代謝紊亂</value>
+  </data>
+  <data name="Dialysis_01_03.FieldSet3" xml:space="preserve">
+    <value>澱粉樣變性</value>
+  </data>
+  <data name="Dialysis_01_03.chk_4_1" xml:space="preserve">
+    <value>腕管綜合症</value>
+  </data>
+  <data name="Dialysis_01_03.chk_4_2" xml:space="preserve">
+    <value>心臟損害</value>
+  </data>
+  <data name="Dialysis_01_03.chk_4_3" xml:space="preserve">
+    <value>骨損害</value>
+  </data>
+  <data name="Dialysis_01_03.chk_4_4" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_03.txt_5" xml:space="preserve">
+    <value>其它澱粉樣變性</value>
+  </data>
+  <data name="Dialysis_01_03.FieldSet4" xml:space="preserve">
+    <value>呼吸系統併發症</value>
+  </data>
+  <data name="Dialysis_01_03.chk_6_1" xml:space="preserve">
+    <value>肺部感染</value>
+  </data>
+  <data name="Dialysis_01_03.chk_6_2" xml:space="preserve">
+    <value>結核</value>
+  </data>
+  <data name="Dialysis_01_03.chk_6_3" xml:space="preserve">
+    <value>胸膜炎</value>
+  </data>
+  <data name="Dialysis_01_03.chk_6_4" xml:space="preserve">
+    <value>胸腔積液</value>
+  </data>
+  <data name="Dialysis_01_03.chk_6_5" xml:space="preserve">
+    <value>尿毒症肺炎 </value>
+  </data>
+  <data name="Dialysis_01_03.chk_6_6" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_03.txt_7" xml:space="preserve">
+    <value>其它呼吸系統併發症</value>
+  </data>
+  <data name="Dialysis_01_03.FieldSet5" xml:space="preserve">
+    <value>心血管</value>
+  </data>
+  <data name="Dialysis_01_03.chk_8_1" xml:space="preserve">
+    <value>心律失常</value>
+  </data>
+  <data name="Dialysis_01_03.chk_8_2" xml:space="preserve">
+    <value>心功能不全</value>
+  </data>
+  <data name="Dialysis_01_03.chk_8_3" xml:space="preserve">
+    <value>急性左心衰竭</value>
+  </data>
+  <data name="Dialysis_01_03.chk_8_4" xml:space="preserve">
+    <value>缺血性心臟病</value>
+  </data>
+  <data name="Dialysis_01_03.chk_8_5" xml:space="preserve">
+    <value>心包炎</value>
+  </data>
+  <data name="Dialysis_01_03.chk_8_6" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_03.txt_9" xml:space="preserve">
+    <value>其它心血管併發症</value>
+  </data>
+  <data name="Dialysis_01_03.FieldSet6" xml:space="preserve">
+    <value>神經系統</value>
+  </data>
+  <data name="Dialysis_01_03.chk_10_1" xml:space="preserve">
+    <value>腦梗塞</value>
+  </data>
+  <data name="Dialysis_01_03.chk_10_2" xml:space="preserve">
+    <value>腦出血</value>
+  </data>
+  <data name="Dialysis_01_03.chk_10_3" xml:space="preserve">
+    <value>神經病變</value>
+  </data>
+  <data name="Dialysis_01_03.chk_10_4" xml:space="preserve">
+    <value>尿毒性腦病</value>
+  </data>
+  <data name="Dialysis_01_03.chk_10_5" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_03.txt_11" xml:space="preserve">
+    <value>其它神經系統併發症 </value>
+  </data>
+  <data name="Dialysis_01_03.FieldSet7" xml:space="preserve">
+    <value>消化系統併發症</value>
+  </data>
+  <data name="Dialysis_01_03.chk_12_1" xml:space="preserve">
+    <value>肝硬化</value>
+  </data>
+  <data name="Dialysis_01_03.chk_12_2" xml:space="preserve">
+    <value>消化道出血</value>
+  </data>
+  <data name="Dialysis_01_03.chk_12_3" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_03.txt_13" xml:space="preserve">
+    <value>其他消化系統併發症</value>
+  </data>
+  <data name="Dialysis_01_03.txt_14" xml:space="preserve">
+    <value>其它併發症</value>
+  </data>
+  <data name="Dialysis_01_03.txt_15" xml:space="preserve">
+    <value>具體情況描述  </value>
+  </data>
+  <data name="Dialysis_01_03.btn_save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_01_03.btn_clear" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Dialysis_01_03.Btn_Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="Dialysis_01_04.FormPanel1" xml:space="preserve">
+    <value>傳染病診斷</value>
+  </data>
+  <data name="Dialysis_01_04.info_date" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_01_04.FieldSet1" xml:space="preserve">
+    <value>疾病種類</value>
+  </data>
+  <data name="Dialysis_01_04.chk_1_1" xml:space="preserve">
+    <value>無</value>
+  </data>
+  <data name="Dialysis_01_04.chk_1_2" xml:space="preserve">
+    <value>丙肝</value>
+  </data>
+  <data name="Dialysis_01_04.chk_1_3" xml:space="preserve">
+    <value>乙肝</value>
+  </data>
+  <data name="Dialysis_01_04.chk_1_4" xml:space="preserve">
+    <value>艾滋病</value>
+  </data>
+  <data name="Dialysis_01_04.chk_1_5" xml:space="preserve">
+    <value>梅毒</value>
+  </data>
+  <data name="Dialysis_01_04.chk_1_6" xml:space="preserve">
+    <value>結核</value>
+  </data>
+  <data name="Dialysis_01_04.chk_1_7" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_04.txt_2" xml:space="preserve">
+    <value>其它請說明</value>
+  </data>
+  <data name="Dialysis_01_04.btn_save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_01_04.btn_clear" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Dialysis_01_04.Btn_Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="Dialysis_01_05.FormPanel1" xml:space="preserve">
+    <value>腫瘤診斷</value>
+  </data>
+  <data name="Dialysis_01_05.info_date" xml:space="preserve">
+    <value>檢查日期</value>
+  </data>
+  <data name="Dialysis_01_05.FieldSet1" xml:space="preserve">
+    <value>診斷</value>
+  </data>
+  <data name="Dialysis_01_05.chk_1_1" xml:space="preserve">
+    <value>無</value>
+  </data>
+  <data name="Dialysis_01_05.chk_1_2" xml:space="preserve">
+    <value>消化系統 </value>
+  </data>
+  <data name="Dialysis_01_05.chk_1_3" xml:space="preserve">
+    <value>呼吸系統 </value>
+  </data>
+  <data name="Dialysis_01_05.chk_1_4" xml:space="preserve">
+    <value>血液系統 </value>
+  </data>
+  <data name="Dialysis_01_05.chk_1_5" xml:space="preserve">
+    <value>泌尿生殖系統</value>
+  </data>
+  <data name="Dialysis_01_05.chk_1_6" xml:space="preserve">
+    <value>神經系統 </value>
+  </data>
+  <data name="Dialysis_01_05.chk_1_7" xml:space="preserve">
+    <value>骨骼肌肉系統 </value>
+  </data>
+  <data name="Dialysis_01_05.chk_1_8" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_05.txt_2" xml:space="preserve">
+    <value>消化系統診斷</value>
+  </data>
+  <data name="Dialysis_01_05.txt_3" xml:space="preserve">
+    <value>呼吸系統診斷</value>
+  </data>
+  <data name="Dialysis_01_05.txt_4" xml:space="preserve">
+    <value>血液系統診斷</value>
+  </data>
+  <data name="Dialysis_01_05.txt_5" xml:space="preserve">
+    <value>泌尿系統診斷</value>
+  </data>
+  <data name="Dialysis_01_05.txt_6" xml:space="preserve">
+    <value>神經系統診斷</value>
+  </data>
+  <data name="Dialysis_01_05.txt_7" xml:space="preserve">
+    <value>骨骼肌肉系統診斷</value>
+  </data>
+  <data name="Dialysis_01_05.txt_8" xml:space="preserve">
+    <value>其它診斷</value>
+  </data>
+  <data name="Dialysis_01_05.btn_save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_01_05.btn_clear" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Dialysis_01_05.Btn_Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="Dialysis_01_06.FormPanel1" xml:space="preserve">
+    <value>併發症</value>
+  </data>
+  <data name="Dialysis_01_06.info_date" xml:space="preserve">
+    <value>診斷日期</value>
+  </data>
+  <data name="Dialysis_01_06.FieldSet1" xml:space="preserve">
+    <value>過敏診斷</value>
+  </data>
+  <data name="Dialysis_01_06.chk_1_1" xml:space="preserve">
+    <value>透析器材過敏</value>
+  </data>
+  <data name="Dialysis_01_06.chk_1_2" xml:space="preserve">
+    <value>藥物過敏</value>
+  </data>
+  <data name="Dialysis_01_06.chk_1_3" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_06.txt_2" xml:space="preserve">
+    <value>其他過敏反應</value>
+  </data>
+  <data name="Dialysis_01_06.FieldSet2" xml:space="preserve">
+    <value>透析器材過敏</value>
+  </data>
+  <data name="Dialysis_01_06.chk_3_1" xml:space="preserve">
+    <value>透析膜</value>
+  </data>
+  <data name="Dialysis_01_06.chk_3_2" xml:space="preserve">
+    <value>消毒劑</value>
+  </data>
+  <data name="Dialysis_01_06.chk_4_1" xml:space="preserve">
+    <value>聚碸膜(PS)</value>
+  </data>
+  <data name="Dialysis_01_06.chk_4_2" xml:space="preserve">
+    <value>聚甲基丙烯酸甲酯膜（PMMA）</value>
+  </data>
+  <data name="Dialysis_01_06.chk_4_3" xml:space="preserve">
+    <value>其它合成膜</value>
+  </data>
+  <data name="Dialysis_01_06.chk_4_4" xml:space="preserve">
+    <value>醋酸纖維膜</value>
+  </data>
+  <data name="Dialysis_01_06.chk_4_5" xml:space="preserve">
+    <value>血仿膜 </value>
+  </data>
+  <data name="Dialysis_01_06.chk_4_6" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_06.txt_5" xml:space="preserve">
+    <value>其它透析膜說明</value>
+  </data>
+  <data name="Dialysis_01_06.txt_6" xml:space="preserve">
+    <value>其它透析膜說明</value>
+  </data>
+  <data name="Dialysis_01_06.chk_7_1" xml:space="preserve">
+    <value>環氧乙烷 </value>
+  </data>
+  <data name="Dialysis_01_06.chk_7_2" xml:space="preserve">
+    <value>過氧乙酸 </value>
+  </data>
+  <data name="Dialysis_01_06.chk_7_3" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_06.txt_8" xml:space="preserve">
+    <value>其它消毒劑說明 </value>
+  </data>
+  <data name="Dialysis_01_06.FieldSet4" xml:space="preserve">
+    <value>藥物過敏</value>
+  </data>
+  <data name="Dialysis_01_06.chk_9_1" xml:space="preserve">
+    <value>抗生素</value>
+  </data>
+  <data name="Dialysis_01_06.chk_9_2" xml:space="preserve">
+    <value>靜脈鐵劑</value>
+  </data>
+  <data name="Dialysis_01_06.chk_9_3" xml:space="preserve">
+    <value>肝素</value>
+  </data>
+  <data name="Dialysis_01_06.chk_9_4" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_06.txt_10" xml:space="preserve">
+    <value>抗生素</value>
+  </data>
+  <data name="Dialysis_01_06.chk_11_1" xml:space="preserve">
+    <value>蔗糖鐵</value>
+  </data>
+  <data name="Dialysis_01_06.chk_11_2" xml:space="preserve">
+    <value>右旋糖苷鐵</value>
+  </data>
+  <data name="Dialysis_01_06.txt_12" xml:space="preserve">
+    <value>蔗糖鐵</value>
+  </data>
+  <data name="Dialysis_01_06.txt_13" xml:space="preserve">
+    <value>右旋糖苷鐵</value>
+  </data>
+  <data name="Dialysis_01_06.opt_14_1" xml:space="preserve">
+    <value>肝素誘導的血小板減少症 </value>
+  </data>
+  <data name="Dialysis_01_06.opt_14_2" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_06.txt_15" xml:space="preserve">
+    <value>其它藥物過敏說明</value>
+  </data>
+  <data name="Dialysis_01_06.btn_save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_01_06.btn_clear" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Dialysis_01_06.Btn_Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="Dialysis_01_07.FormPanel1" xml:space="preserve">
+    <value>轉歸情況</value>
+  </data>
+  <data name="Dialysis_01_07.info_date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="Dialysis_01_07.FieldSet1" xml:space="preserve">
+    <value>轉歸情況</value>
+  </data>
+  <data name="Dialysis_01_07.Button8" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_07.opt_1_1" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="Dialysis_01_07.opt_1_2" xml:space="preserve">
+    <value>腎移植</value>
+  </data>
+  <data name="Dialysis_01_07.opt_1_3" xml:space="preserve">
+    <value>轉出</value>
+  </data>
+  <data name="Dialysis_01_07.opt_1_4" xml:space="preserve">
+    <value>死亡</value>
+  </data>
+  <data name="Dialysis_01_07.opt_1_5" xml:space="preserve">
+    <value>轉入</value>
+  </data>
+  <data name="Dialysis_01_07.FieldSet2" xml:space="preserve">
+    <value>退出情況</value>
+  </data>
+  <data name="Dialysis_01_07.Button1" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_07.opt_2_1" xml:space="preserve">
+    <value>脫離透析</value>
+  </data>
+  <data name="Dialysis_01_07.opt_2_2" xml:space="preserve">
+    <value>轉為腹膜透析</value>
+  </data>
+  <data name="Dialysis_01_07.opt_2_3" xml:space="preserve">
+    <value>放棄治療</value>
+  </data>
+  <data name="Dialysis_01_07.opt_2_4" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_07.txt_3" xml:space="preserve">
+    <value>其它退出情況說明</value>
+  </data>
+  <data name="Dialysis_01_07.FieldSet3" xml:space="preserve">
+    <value>轉出地點</value>
+  </data>
+  <data name="Dialysis_01_07.Button2" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_07.opt_4_1" xml:space="preserve">
+    <value>本市其它醫院</value>
+  </data>
+  <data name="Dialysis_01_07.opt_4_2" xml:space="preserve">
+    <value>本省其它城市醫院</value>
+  </data>
+  <data name="Dialysis_01_07.opt_4_3" xml:space="preserve">
+    <value>外省醫院</value>
+  </data>
+  <data name="Dialysis_01_07.FieldSet4" xml:space="preserve">
+    <value>轉出原因</value>
+  </data>
+  <data name="Dialysis_01_07.Button3" xml:space="preserve">
+    <value>清空</value>
+  </data>
+  <data name="Dialysis_01_07.opt_5_1" xml:space="preserve">
+    <value>醫保醫院變更</value>
+  </data>
+  <data name="Dialysis_01_07.opt_5_2" xml:space="preserve">
+    <value>住所變更</value>
+  </data>
+  <data name="Dialysis_01_07.opt_5_3" xml:space="preserve">
+    <value>患者自主選擇</value>
+  </data>
+  <data name="Dialysis_01_07.opt_5_4" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_07.txt_6" xml:space="preserve">
+    <value>其它請說明 </value>
+  </data>
+  <data name="Dialysis_01_07.FieldSet5" xml:space="preserve">
+    <value>死亡原因</value>
+  </data>
+  <data name="Dialysis_01_07.chk_7_1" xml:space="preserve">
+    <value>心血管事件</value>
+  </data>
+  <data name="Dialysis_01_07.chk_7_2" xml:space="preserve">
+    <value>腦血管事件</value>
+  </data>
+  <data name="Dialysis_01_07.chk_7_3" xml:space="preserve">
+    <value>感染</value>
+  </data>
+  <data name="Dialysis_01_07.chk_7_4" xml:space="preserve">
+    <value>消化道出血等出血性疾病</value>
+  </data>
+  <data name="Dialysis_01_07.chk_7_5" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_07.FieldSet6" xml:space="preserve">
+    <value>心血管事件</value>
+  </data>
+  <data name="Dialysis_01_07.chk_8_1" xml:space="preserve">
+    <value>心律失常</value>
+  </data>
+  <data name="Dialysis_01_07.chk_8_2" xml:space="preserve">
+    <value>急性左心衰</value>
+  </data>
+  <data name="Dialysis_01_07.chk_8_3" xml:space="preserve">
+    <value>猝死</value>
+  </data>
+  <data name="Dialysis_01_07.chk_8_4" xml:space="preserve">
+    <value>其它 </value>
+  </data>
+  <data name="Dialysis_01_07.txt_9" xml:space="preserve">
+    <value>其它心血管事件</value>
+  </data>
+  <data name="Dialysis_01_07.FieldSet8" xml:space="preserve">
+    <value>腦血管事件</value>
+  </data>
+  <data name="Dialysis_01_07.chk_10_1" xml:space="preserve">
+    <value>腦出血</value>
+  </data>
+  <data name="Dialysis_01_07.chk_10_2" xml:space="preserve">
+    <value>腦梗塞</value>
+  </data>
+  <data name="Dialysis_01_07.chk_10_3" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_07.txt_11" xml:space="preserve">
+    <value>其它腦血管事件</value>
+  </data>
+  <data name="Dialysis_01_07.FieldSet7" xml:space="preserve">
+    <value>感染  </value>
+  </data>
+  <data name="Dialysis_01_07.chk_12_1" xml:space="preserve">
+    <value>肺部感染 </value>
+  </data>
+  <data name="Dialysis_01_07.chk_12_2" xml:space="preserve">
+    <value>消化道感染 </value>
+  </data>
+  <data name="Dialysis_01_07.chk_12_3" xml:space="preserve">
+    <value>膿毒血症</value>
+  </data>
+  <data name="Dialysis_01_07.chk_12_4" xml:space="preserve">
+    <value>其它</value>
+  </data>
+  <data name="Dialysis_01_07.txt_13" xml:space="preserve">
+    <value>其它感染 </value>
+  </data>
+  <data name="Dialysis_01_07.txt_14" xml:space="preserve">
+    <value>其它死亡原因請說明</value>
+  </data>
+  <data name="Dialysis_01_07.btn_save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Dialysis_01_07.btn_clear" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Dialysis_01_07.Btn_Close" xml:space="preserve">
+    <value>關閉</value>
+  </data>
+  <data name="Doctor" xml:space="preserve">
+    <value>主治醫師</value>
+    <comment>主治醫師</comment>
+  </data>
+  <data name="InputAgain" xml:space="preserve">
+    <value>只有醫師可開立醫囑，請重新输入!</value>
+    <comment>只有醫師可開立醫囑，請重新输入!</comment>
+  </data>
+  <data name="NotLogin" xml:space="preserve">
+    <value>病患尚未登入!</value>
+    <comment>病患尚未登入!</comment>
+  </data>
+  <data name="UserId" xml:space="preserve">
+    <value>使用人</value>
+    <comment>使用人</comment>
+  </data>
+</root>

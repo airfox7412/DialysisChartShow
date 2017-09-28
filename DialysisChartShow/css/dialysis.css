@@ -1,0 +1,324 @@
+﻿       
+.x-boundlist-item 
+{ 
+    font-size: 18px;
+    height: 20px;
+}
+        
+.x-border-box .x-form-text
+{
+    height: 20px;
+    font-size: 18px;    
+}
+        
+.x-form-item-label-right
+{
+    font-size: 18px;
+    line-height: 20px;
+    color:White;
+}
+
+.x-toolbar-default
+{
+    background-color : #3892D3; 
+}
+
+.x-grid-header-ct
+{
+    background-color : #157FCC; 
+}
+        
+.x-grid-row .x-grid-cell { 
+    font-size: 18px;
+    background-color : #3892D3; 
+}
+        
+.x-grid-with-row-lines .x-grid-cell-inner
+{
+    font-size: 16px;
+    line-height: 16px;
+    color:White;
+    background-color : #3892D3; 
+}
+        
+.x-column-header-text
+{
+    font-size: 16px;
+    line-height: 17px;
+    color:Yellow;
+}
+        
+.x-column-header-inner
+{
+    background-color : #157FCC; 
+} 
+
+.dvcolor, .x-border-box
+{
+    background-color : #157FCC; 
+}
+       
+.Text-blue .x-form-field
+{
+    color: blue;
+}
+.Text-blue-H .x-form-field
+{
+    height: 18px;
+    color: blue;
+}
+        
+.label .x-label-value
+{
+    height: 20px !important;
+    font-size: 20px; 
+    color:White;
+}
+
+/* Text items */
+.big-text .x-toolbar-text {
+    font-size: 18px;
+}
+
+/* Button text */
+.big-text .x-btn-default-toolbar-small {
+    font-size: 18px;
+    color:Yellow;
+}
+
+.big-y-text .x-btn-inner {
+    font-size: 18px;
+    color:Yellow;
+}
+
+.mid-w-text .x-btn-inner {
+    font-size: 18px;
+    color:White;
+}
+     
+.Text-red .x-form-field
+{
+    color: red;
+}
+        
+.Text-red-H .x-form-field
+{
+    height: 18px;
+    color: red;
+}
+        
+.x-panel-header-text {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    color: White;
+}
+        
+.x-panel-body{
+    background-color : #5ABCE0; /*#3892D3;*/
+}        
+.x-tip .x-tip-mc 
+{
+    font-family: @SimSun;
+    font-size: 24px;
+}
+        
+.x-tip .x-tip-header-text 
+{
+    font-family: @SimSun;
+    font-size: 24px;
+}
+        
+.x-tip .x-tip-body 
+{
+    font-family: @SimSun;
+    font-size: 24px;
+}
+        
+.mid-tab-text .x-tab-default .x-tab-inner {
+    font-size: 18px; 
+    line-height: 20px;
+    width:150px;
+    color: Yellow;
+}
+        
+.x-field-indicator
+{
+    font-size: 18px; 
+}
+        
+.x-window-header-text-default
+{
+    font-size: 18px; 
+    line-height: 18px;
+}
+.x-btn-default-medium .add {
+    background-image: url(style/ap.png) !important;
+}
+
+/* @group Blink */
+.blink {
+    font-size: 18px;
+    height: 20px;
+    color: Red;
+	-webkit-animation: blink .75s linear infinite;
+	-moz-animation: blink .75s linear infinite;
+	-ms-animation: blink .75s linear infinite;
+	-o-animation: blink .75s linear infinite;
+	    animation: blink .75s linear infinite;
+}
+@-webkit-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@-o-keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+@keyframes blink {
+	0% { opacity: 1; }
+	50% { opacity: 1; }
+	50.01% { opacity: 0; }
+	100% { opacity: 0; }
+}
+/* @end */
+
+.read_field .x-form-field
+{
+    background-color: #EEEEEE;
+}
+
+.images-view .x-panel-body {
+    background-color: #3892D3;
+    font: 11px Arial, Helvetica, sans-serif;
+    color:White;
+}
+
+.images-view .thumb {
+    background-color:#3892D3;
+    padding: 3px;
+    padding-bottom: 0;
+}
+
+.x-quirks .images-view .thumb {
+    padding-bottom: 3px;
+}
+
+.images-view .thumb img {
+    height: 70px;
+    width: 100px;
+}
+
+.images-view .thumb-wrap {
+    float: left;
+    margin: 4px;
+    margin-right: 0;
+    padding: 5px;
+    border-width:1px; 
+    border-style:solid;
+    border-color: White;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.images-view .thumb-wrap span {  
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    width: 86px; /*for ie to ensure that the text is centered*/
+}
+
+.images-view .x-item-over{
+    border: 1px solid #dddddd;
+    background: #efefef url(../Styles/row-over.gif) repeat-x left top;
+    padding: 4px;
+}
+
+.images-view .x-item-selected{
+    /*background: #eff5fb url(../Styles/selected.gif) no-repeat right bottom;*/
+    background-color:#157FCC;
+    border: 5px solid Aqua;
+    padding: 8px;
+}
+
+.images-view .x-item-selected .thumb{
+    background-color: transparent;
+    border-radius: 15px;
+}
+
+.images-view .loading-indicator {
+    font-size: 11px;
+    background-image : url('../Styles/loading.gif');
+    background-repeat: no-repeat;
+    background-position: left;
+    padding-left: 18px;
+    margin: 10px;
+}
+
+.x-view-selector {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    border: 1px dotted;
+    opacity: .5;
+    -moz-opacity: .5;
+    filter: alpha(opacity=50);
+    zoom: 1;
+    background-color: #c3daf9;
+    border-color: #3399bb;
+}
+
+.ext-strict .ext-ie .x-tree .x-panel-bwrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.images-view .info img{
+    height: 70px;
+}
+
+.x-grid-custom .x-grid-row-alt
+{
+    background-color: #DAE2E8;
+}
+
+.x-btn-icon-left > .x-btn-icon-el-plain-toolbar-small, .x-btn-icon-right > .x-btn-icon-el-plain-toolbar-small
+{
+    color:Navy;
+}
+.x-toolbar-default .x-toolbar-item
+{
+    color:Navy;
+}
+.x-form-text-default
+{
+    min-height:24px;
+}
+.x-form-trigger-default
+{
+    width:32;
+}
+
+.div-center
+{
+  margin-left: auto;
+  margin-right: auto;
+}
